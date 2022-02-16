@@ -1,7 +1,65 @@
 // Fonts
 
-@mixin ptmono {
-  font-family: "ptmono", "Arial", sans-serif;
+@mixin cormorant-italic {
+  font-family: "cormorant", "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin cormorant-m-italic {
+  font-family: "cormorant", "Times New Roman", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@mixin cormorant-bold {
+  font-family: "cormorant", "Times New Roman", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin cormorant-s-bold {
+  font-family: "cormorant", "Times New Roman", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin poppins-regular {
+  font-family: "poppins", "Arial", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@mixin poppins-medium {
+  font-family: "poppins", "Arial", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin poppins-bold {
+  font-family: "poppins", "Arial", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Media Breakpoints
+
+@mixin tablet {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+// Retina
+
+@mixin retina {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
 }
