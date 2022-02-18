@@ -20,33 +20,45 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <input type="text" name="search" id="search-id" aria-label="Поле ввода поиска по сайту">
-      <label for="search-id"></label>
-      <button><span class="visually-hidden">Открыть меню</span></button>
-      <svg width="66" height="66" viewBox="0 0 66 66">
-        <use xlink:href="img/sprite.svg#icon-logo"></use>
-      </svg>
-      <a href="" aria-label="Ссылка-переход на страницу формы входа в личный кабинет">Login</a>
-      <svg width="8" height="15" viewBox="0 0 8 15">
-        <use xlink:href="img/sprite.svg#icon-fb-desktop"></use>
-      </svg>
-      <a href="" aria-label="Ссылка для перехода в корзину товаров">
-        <span>Cart</span><span>0</span>
-      </a>
-      <nav>
-        <ul>
+      <div class="page-header__search">
+        <svg width="14" height="14" viewBox="0 0 14 14">
+          <use xlink:href="img/sprite.svg#icon-search"></use>
+        </svg>
+        <input type="text" name="search" id="search-id" aria-label="Поле ввода поиска по сайту"
+          placeholder="Type here to search">
+        <label for="search-id"></label>
+      </div>
+      <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="page-header__logo">
+        <svg width="66" height="66" viewBox="0 0 66 66">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </div>
+      <div class="page-header__links">
+        <a class="page-header__link page-header__link--login" href=""
+          aria-label="Ссылка-переход на страницу формы входа в личный кабинет">Login</a>
+        <a class="page-header__link page-header__link--cart" href="" aria-label="Ссылка для перехода в корзину товаров">
+          <svg width="20" height="18" viewBox="0 0 20 18">
+            <use xlink:href="img/sprite.svg#icon-busket"></use>
+          </svg>
+          <span>Cart</span><span>0</span>
+        </a>
+      </div>
+      <nav class="page-header__menu">
+        <ul class="page-header__goods-list">
           <li><a href="" aria-label="Раздел новостей">What’s new</a></li>
           <li><a href="" aria-label="Раздел с чокерами">Chokers</a></li>
           <li><a href="" aria-label="Раздел с подвесками">Necklaces</a></li>
           <li><a href="" aria-label="Раздел с кольцами">Rings</a></li>
           <li><a href="" aria-label="Раздел с серьгами">Earrings</a></li>
         </ul>
-        <ul>
+        <ul class="page-header__data-list">
           <li><a href="" aria-label="Раздел о компании">About CH</a></li>
           <li><a href="" aria-label="Магазины и времени работы">Stores & Hours</a></li>
           <li><a href="" aria-label="Контактные данные">Contact Us</a></li>
         </ul>
-        <a href="" aria-label="Ссылка-переход на страницу формы входа в личный кабинет">Login</a>
+        <a class="page-header__menu-link-login" href=""
+          aria-label="Ссылка-переход на страницу формы входа в личный кабинет">Login</a>
       </nav>
     </div>
   </header>

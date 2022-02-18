@@ -1,0 +1,302 @@
+.page-header {
+  width: 100%;
+  @include poppins-medium;
+
+  @include tablet {
+    height: 100px;
+  }
+}
+
+// Открытое мобильное меню
+
+.page-header--open {
+  height: auto;
+  background-color: $brown-main;
+}
+
+.page-header--open .page-header__logo svg {
+  fill: $white;
+}
+
+.page-header--open .page-header__link--cart svg {
+  display: none;
+
+  @include tablet {
+    cursor: pointer;
+    display: block;
+    stroke: $white;
+    width: 18px;
+    height: 16px;
+    transition: stroke 0.3s ease 0s;
+  }
+}
+
+.page-header--open .page-header__link--cart:hover {
+  svg {
+    stroke: $dark;
+    transition: stroke 0.3s ease 0s;
+  }
+}
+
+.page-header--open .page-header__toggle::before {
+  @include tablet {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: $white;
+    box-shadow: 0 7px 0 0 $white, 0 14px 0 0 $white;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.page-header--open .page-header__toggle:hover::before {
+  background-color: $dark;
+  box-shadow: 0 7px 0 0 $dark, 0 14px 0 0 $dark;
+}
+
+// Основные стили
+
+.page-header__wrapper {
+  padding: 10px 7%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    position: relative;
+    padding: 30px 5% 80px;
+  }
+}
+
+// Главный логотип
+
+.page-header__logo svg {
+  fill: $brown-main;
+}
+
+// Поле поиска
+
+.page-header__search {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include tablet {
+    width: 100%;
+    order: 3;
+    margin: 55px 0 0 0;
+  }
+}
+
+.page-header__search input {
+  border: none;
+  margin: 0 0 0 15px;
+  padding: 7px 0;
+
+  @include tablet {
+    width: 100%;
+    background-color: $white-pale;
+    border-radius: 21px;
+    margin: 0;
+  }
+}
+
+.page-header__search svg {
+  stroke: $black;
+
+  @include tablet {
+    stroke: $white;
+    fill: $white;
+    position: absolute;
+    left: 10px;
+    opacity: 0.6;
+  }
+}
+
+.page-header__search input::placeholder {
+  color: $pale-text;
+  font-size: 14px;
+  line-height: 21 / 14 * 100%;
+
+  @include tablet {
+    color: transparent;
+  }
+}
+
+// Служебные ссылки
+
+.page-header__links a {
+  font-size: 14px;
+  line-height: 21 / 14 * 100%;
+  color: $dark;
+}
+
+.page-header__link--login {
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header__link--cart {
+  margin: 0 0 0 35px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.page-header__link--cart svg {
+  display: none;
+
+  @include tablet {
+    cursor: pointer;
+    display: block;
+    stroke: $dark;
+    width: 18px;
+    height: 16px;
+    transition: stroke 0.3s ease 0s;
+  }
+}
+
+.page-header__link--cart:hover {
+  svg {
+    stroke: $brown-main;
+  }
+}
+
+.page-header__link--cart span {
+  @include tablet {
+    display: none;
+  }
+}
+
+.page-header__link--cart span:last-of-type {
+  margin: 0 0 0 5px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+// Бургер
+
+.page-header__toggle {
+  display: none;
+
+  @include tablet {
+    display: block;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 16px;
+    position: relative;
+  }
+}
+
+.page-header__toggle::before {
+  @include tablet {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: $dark;
+    box-shadow: 0 7px 0 0 $dark, 0 14px 0 0 $dark;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.page-header__toggle:hover::before {
+  background-color: $brown-main;
+  box-shadow: 0 7px 0 0 $brown-main, 0 14px 0 0 $brown-main;
+}
+
+// Меню навигации и мобильное меню
+
+.page-header__menu {
+  width: 100%;
+  padding: 44px 0 0 0;
+
+  @include tablet {
+    order: 5;
+  }
+}
+
+.page-header__menu ul {
+  list-style: none;
+}
+
+.page-header__goods-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  @include tablet {
+    flex-direction: column;
+    margin: 0 0 55px 0;
+  }
+}
+
+.page-header__goods-list a {
+  font-size: 16px;
+  line-height: 24 / 16 *100%;
+  color: $dark;
+
+  @include tablet {
+    font-size: 24px;
+    color: $white;
+  }
+}
+
+.page-header__goods-list li:not(:last-child) {
+  margin: 0 0 0 34px;
+
+  @include tablet {
+    margin: 0 0 40px 0;
+  }
+}
+
+.page-header__data-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @include tablet {
+    display: block;
+    margin: 0 0 55px 0;
+  }
+}
+
+.page-header__data-list li:not(:last-child) {
+  @include tablet {
+    margin: 0 0 30px 0;
+  }
+}
+
+.page-header__data-list a {
+  @include tablet {
+    font-size: 18px;
+    line-height: 23 / 18 *100%;
+    color: $white-pale-75;
+  }
+}
+
+.page-header__menu-link-login {
+  display: none;
+
+  @include tablet {
+    display: block;
+    font-size: 18px;
+    line-height: 23 / 18 *100%;
+    color: $white;
+  }
+}
