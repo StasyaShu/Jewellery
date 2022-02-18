@@ -1,44 +1,59 @@
 {
-  "name": "Liga-A-start-template",
-  "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
-  "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.5.x",
-    "browser-sync": "^2.27.7",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x",
-    "gulp": "^4.0.2",
-    "gulp-csso": "^3.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-install": "^1.1.0",
-    "gulp-plumber": "1.2.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-posthtml": "^3.0.4",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "4.0.x",
-    "gulp-sourcemaps": "2.6.x",
-    "gulp-svgstore": "^7.0.1",
-    "gulp-webp": "^4.0.1",
-    "node-normalize-scss": "^8.1.2",
-    "pixel-glass": "^1.0.13",
-    "posthtml-include": "^1.2.0",
-    "stylelint": "^13.13.x",
-    "stylelint-config-htmlacademy": "^0.1.11"
-  },
+  "name": "gulp",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint source/js/",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
-    "build": "gulp build",
-    "start": "gulp start",
-    "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "fix": "eslint --fix ./source/js && stylelint --fix ./source/sass/",
+    "start": "gulp",
+    "build": "gulp build"
   },
+  "author": "Stanislava Shulepova",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "autoprefixer": "^9.0.0",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "editorconfig": "^0.13.3",
+    "editorconfig-cli": "^0.3.0",
+    "eslint": "^7.31.0",
+    "eslint-cli": "^1.1.1",
+    "eslint-config-htmlacademy": "^4.0.2",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-optimize-regex": "^1.2.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-terser": "^2.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-normalize-scss": "^8.1.2",
+    "postcss": "^8.4.4",
+    "postcss-csso": "^5.0.1",
+    "rollup-stream": "^1.24.1",
+    "sass": "^1.38.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.10",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "description": "",
   "browserslist": [
     "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "not dead",
+    "not ie <= 11"
   ],
   "editorconfig-cli": [
     "*.json",
@@ -46,13 +61,9 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.{sass,scss}"
+    "source/sass/**/*.scss"
   ],
-  "engines": {
-    "node": "8.15"
-  },
   "dependencies": {
-    "del": "^4.1.1",
     "normalize-scss": "^7.0.1"
   }
 }
