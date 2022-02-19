@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
+  background-color: $brown-main;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/promo-main-desktop@2x.jpg");
