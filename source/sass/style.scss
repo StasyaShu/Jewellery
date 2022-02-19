@@ -10,12 +10,16 @@
 @import "blocks/landing-header.scss";
 @import "blocks/landing-body.scss";
 
-// Blocks - Main page
+// Common
 
 @import "blocks/overlay.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
-@import "blocks/page-main.scss";
 @import "blocks/page-footer.scss";
+
+// Blocks - Main page
+@import "blocks/page-main.scss";
+@import "blocks/promo-main.scss";
+
 
 
