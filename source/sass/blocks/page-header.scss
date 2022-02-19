@@ -4,14 +4,19 @@
 
   @include tablet {
     height: 100px;
+    transition: height 1s ease 0s;
   }
 }
 
 // Открытое мобильное меню
 
 .page-header--open {
-  height: auto;
   background-color: $brown-main;
+  z-index: 50;
+  overflow: hidden;
+  height: 100vh;
+  overflow-y: auto;
+  transition: height 1s ease 0s;
 }
 
 .page-header--open .page-header__logo svg {
@@ -70,6 +75,10 @@
     position: relative;
     padding: 30px 5% 80px;
   }
+}
+
+.page-header__wrapper a:hover {
+  color: $dark;
 }
 
 // Главный логотип
