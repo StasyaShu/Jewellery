@@ -1,0 +1,46 @@
+.blog-main {
+  width: 100%;
+}
+
+.blog-main__wrapper {
+  padding: 0 7% 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    padding: 0 5%;
+  }
+}
+
+.blog-main__wrapper p {
+  font-size: 34px;
+  line-height: 44 / 34 *100%;
+  color: $dark;
+  margin: 0;
+  padding: 0;
+
+  @include cormorant-bold;
+}
+
+.blog-main__wrapper a {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+
+  @include poppins-medium;
+  display: block;
+  position: relative;
+}
+
+.blog-main__wrapper a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: $brown-main;
+}
+
+
