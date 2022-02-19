@@ -5,9 +5,16 @@
 @import "general/global.scss";
 @import "general/mixins.scss";
 
-// Blocks
+// Blocks - Landing page
+
+@import "blocks/landing-header.scss";
+@import "blocks/landing-body.scss";
+
+// Blocks - Main page
 
 @import "blocks/overlay.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
+
+

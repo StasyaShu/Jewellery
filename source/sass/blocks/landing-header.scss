@@ -1,0 +1,42 @@
+.landing-header {
+  width: 100%;
+}
+
+.landing-header__wrapper {
+  padding: 0 15%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.landing-header__wrapper h1 {
+  font-size: 32px;
+  line-height: 44 / 32 *100%;
+  color: $dark;
+
+  @include poppins-bold;
+}
+
+.landing-header__navigation ol {
+  margin: 0;
+  padding: 0;
+}
+
+.landing-header__navigation li::marker {
+  font-size: 24px;
+  line-height: 36 / 24 *100%;
+  color: $dark;
+
+  @include poppins-medium;
+}
+
+.landing-header__navigation a {
+  font-size: 24px;
+  line-height: 36 / 24 *100%;
+  color: $dark;
+
+  @include poppins-medium;
+}
+
+.landing-header__navigation a:hover {
+  color: $white;
+}
