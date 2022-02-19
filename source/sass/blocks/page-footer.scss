@@ -1,0 +1,211 @@
+// Основное
+
+.page-footer {
+  background-color: $black;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.page-footer__wrapper {
+  padding: 100px 7%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    padding: 60px 22% 60px 7%;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+}
+
+.page-footer__wrapper a {
+  color: $white;
+}
+
+// Блок подписки на новости
+
+.page-footer__signin {
+
+  @include tablet {
+    width: 100%;
+    margin: 0 0 50px 0;
+  }
+}
+
+.page-footer__signin h2 {
+  font-size: 34px;
+  line-height: 44 / 34 *100%;
+  letter-spacing: 0.03em;
+  color: $white;
+  margin: 0 0 15px 0;
+  padding: 0;
+
+  @include cormorant-bold;
+}
+
+.page-footer__signin p {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $pale-text;
+  margin: 0 0 52px 0;
+  padding: 0;
+
+  @include poppins-regular;
+}
+
+.page-footer__signin-input {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__signin-input input {
+  border: none;
+  background: transparent;
+  color: $pink;
+  font-size: 14px;
+  line-height: 21 / 14 * 100%;
+  width: 290px;
+
+  @include poppins-medium;
+}
+
+.page-footer__signin-input::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+  bottom: -15px;
+  left: 0;
+}
+
+.page-footer__signin-input a {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  width: 106px;
+
+  @include poppins-medium;
+}
+
+.page-footer__signin-input svg {
+  margin: 0 0 0 12px;
+  stroke: $white;
+}
+
+.page-footer__signin-input a:hover {
+  color: $pink;
+
+  svg {
+    stroke: $pink;
+  }
+}
+
+// Блок со служебными ссылками
+
+.page-footer__services-list ul {
+  list-style: none;
+  margin: 0 0 0 60px;
+  padding: 13px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  width: 380px;
+  row-gap: 25px;
+  column-gap: 45px;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include mobile {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.page-footer__services-list a {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+
+  @include poppins-medium;
+}
+
+.page-footer__services-list a:hover {
+  color: $pink;
+}
+
+.page-footer__services-list li {
+
+  @include mobile {
+    margin: 0 0 30px 0;
+  }
+}
+
+.page-footer__services-list li:nth-child(4n+4) {
+
+  @include mobile {
+    margin: 0 0 50px 0;
+  }
+}
+
+// Блок соцсетей
+
+.page-footer__social ul {
+  list-style: none;
+  margin: 0;
+  padding: 13px 0 0 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: row;
+    height: auto;
+    width: 168px;
+  }
+}
+
+.page-footer__social a {
+  display: block;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  display: flex;
+
+  @include poppins-medium;
+}
+
+.page-footer__social svg {
+  fill: $white;
+
+  @include mobile {
+    width: 20px;
+    height: 21px;
+  }
+}
+
+.page-footer__social a:hover {
+  color: $pink;
+
+  svg {
+    fill: $pink;
+  }
+}
+
+.page-footer__social span {
+  text-align: left;
+  display: block;
+  margin: 0 0 0 15px;
+
+  @include mobile {
+    display: none;
+  }
+}

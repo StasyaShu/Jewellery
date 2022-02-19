@@ -8,6 +8,29 @@
   }
 }
 
+// Основные стили
+
+.page-header__wrapper {
+  padding: 10px 7%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    position: relative;
+    padding: 30px 5% 80px;
+  }
+}
+
+.page-header__wrapper a:hover {
+  color: $brown-main;
+
+  @include tablet {
+    color: $dark;
+  }
+}
+
 // Открытое мобильное меню
 
 .page-header--open {
@@ -60,25 +83,6 @@
 .page-header--open .page-header__toggle:hover::before {
   background-color: $dark;
   box-shadow: 0 7px 0 0 $dark, 0 14px 0 0 $dark;
-}
-
-// Основные стили
-
-.page-header__wrapper {
-  padding: 10px 7%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include tablet {
-    position: relative;
-    padding: 30px 5% 80px;
-  }
-}
-
-.page-header__wrapper a:hover {
-  color: $dark;
 }
 
 // Главный логотип
@@ -266,7 +270,7 @@
   }
 }
 
-.page-header__goods-list li:not(:last-child) {
+.page-header__goods-list li {
   margin: 0 0 0 34px;
 
   @include tablet {
