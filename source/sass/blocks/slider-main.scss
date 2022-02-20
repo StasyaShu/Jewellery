@@ -23,7 +23,7 @@
   font-size: 34px;
   line-height: 44 / 34 *100%;
   color: $dark;
-  margin: 0;
+  margin: 0 0 35px 0;
   padding: 0;
 
   @include cormorant-bold;
@@ -33,10 +33,11 @@
   font-size: 16px;
   line-height: 21 / 16 *100%;
   color: $dark;
-
-  @include poppins-medium;
   display: block;
   position: relative;
+  margin: 0 0 60px 0;
+
+  @include poppins-medium;
 }
 
 .slider-main__wrapper a::after {

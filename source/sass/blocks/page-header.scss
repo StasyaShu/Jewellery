@@ -1,6 +1,9 @@
 .page-header {
   width: 100%;
   @include poppins-medium;
+  position: fixed;
+  z-index: 3;
+  background-color: $white;
 
   @include tablet {
     height: 100px;

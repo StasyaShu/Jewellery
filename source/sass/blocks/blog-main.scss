@@ -1,3 +1,5 @@
+// Основные стили блока
+
 .blog-main {
   width: 100%;
 }
@@ -9,31 +11,82 @@
   align-items: center;
 
   @include mobile {
-    padding: 0 5%;
+    padding: 0 5% 80px;
   }
 }
 
-.blog-main__wrapper p {
+// Список записей в блоге
+
+.blog-main__wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  @include mobile {
+    align-items: stretch;
+    gap: 40px;
+  }
+}
+
+.blog-main__wrapper li:first-of-type {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.blog-main__wrapper li:nth-child(2n+2) {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.blog-main__wrapper li:nth-child(3n+3) {
+  grid-row: 1 / -1;
+  grid-column: 2 / 3;
+}
+
+
+// Заголок блока
+
+.blog-main__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 60px 0;
+}
+
+.blog-main__header p {
   font-size: 34px;
   line-height: 44 / 34 *100%;
   color: $dark;
-  margin: 0;
+  margin: 0 0 35px 0;
   padding: 0;
 
   @include cormorant-bold;
 }
 
-.blog-main__wrapper a {
+.blog-main__header a {
   font-size: 16px;
   line-height: 21 / 16 *100%;
   color: $dark;
-
-  @include poppins-medium;
   display: block;
   position: relative;
+
+  @include poppins-medium;
 }
 
-.blog-main__wrapper a::after {
+.blog-main__header a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -43,4 +96,153 @@
   background-color: $brown-main;
 }
 
+// Первая запись в блоге об уходе
 
+.blog-main__care {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.blog-main__care b {
+  max-width: 163px;
+}
+
+.blog-main__care div {
+  @include mobile {
+    padding: 35px;
+  }
+}
+
+// Вторая запись в блоге о камнях
+
+.blog-main__crystals {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+.blog-main__crystals picture {
+  order: 2;
+}
+
+.blog-main__crystals b {
+  max-width: 95px;
+}
+
+.blog-main__crystals div {
+  @include mobile {
+    padding: 35px;
+  }
+}
+
+// Третья запись о трендах
+
+.blog-main__girl {
+  position: relative;
+
+
+  @include tablet {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.blog-main__girl div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 300px;
+  justify-content: center;
+  background-color: $beige;
+
+  @include tablet {
+    height: auto;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include mobile {
+    padding: 50px;
+  }
+}
+
+// Общая информация о записи
+
+.blog-main__content {
+  display: flex;
+  flex-direction: column;
+  width: 285px;
+  align-items: center;
+
+  @include tablet {
+    width: 339px;
+  }
+
+  @include mobile {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+.blog-main__content a {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+  display: block;
+  position: relative;
+  text-align: center;
+
+  @include poppins-medium;
+}
+
+.blog-main__content a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: $brown-main;
+}
+
+.blog-main__content time {
+  display: block;
+  margin: 0 0 25px 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 18 / 14 *100%;
+  color: $pale-text;
+
+  @include poppins-medium;
+}
+
+.blog-main__content b {
+  font-size: 26px;
+  line-height: 34 / 26 *100%;
+  color: $black;
+  display: block;
+  margin: 0 0 50px 0;
+  padding: 0;
+  text-align: center;
+
+  @include cormorant-s-bold;
+}
