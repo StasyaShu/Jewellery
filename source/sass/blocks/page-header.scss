@@ -1,6 +1,10 @@
 .page-header {
   width: 100%;
   @include poppins-medium;
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+  background-color: $white;
 
   @include tablet {
     height: 100px;
