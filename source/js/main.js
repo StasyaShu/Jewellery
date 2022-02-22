@@ -83,3 +83,19 @@ const handleAccordion = (() => {
   }
 })()
 handleAccordion.manageAccordion();
+
+// Слайдер Swiper
+
+new Swiper('.swiper', {
+
+  navigation: {
+    nextEl: '.swiper-button-next-slide',
+    prevEl: '.swiper-button-prev-slide',
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
