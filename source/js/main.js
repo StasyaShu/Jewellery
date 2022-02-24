@@ -86,7 +86,7 @@ handleAccordion.manageAccordion();
 
 // Слайдер Swiper
 
-new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
 
   navigation: {
     nextEl: '.swiper-button-next-slide',
