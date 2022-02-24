@@ -1,0 +1,286 @@
+// Основные
+
+.goods__wrapper {
+  padding: 80px 7%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// Кнопка фильтра
+
+.goods__button-filter {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Фильтр товаров
+
+.goods__wrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.goods__accordion {
+  border: 1px solid $brown-main;
+  margin: 0 0 35px 0;
+}
+
+.goods__tab {
+  position: relative;
+  padding: 50px 38px 30px;
+
+  @include mobile {
+    padding: 50px 18px 30px;
+  }
+}
+
+.goods__tab:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: $brown-main;
+}
+
+.goods__title {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+
+  @include poppins-medium;
+}
+
+.goods__tab-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+  width: 100%;
+}
+
+.goods__tab-content label {
+  cursor: pointer;
+  position: relative;
+  padding: 0 0 0 25px;
+  font-size: 14px;
+  line-height: 18 / 14 *100%;
+  color: $dark;
+
+  @include poppins-medium;
+}
+
+.goods__tab-content input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $brown-main;
+  background-color: transparent;
+}
+
+.goods__tab-content input:hover + label::before {
+  background-color: $brown-main;
+}
+
+.goods__tab-content input:checked + label::before {
+  background-color: $brown-main;
+}
+
+.goods__tab-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goods__tab-content li {
+  display: flex;
+  align-items: center;
+}
+
+.goods__tab-content li:not(:last-child) {
+  margin: 0 0 25px 0;
+}
+
+.goods__range-controls {
+  margin: 9px 0 23px 0;
+}
+
+.goods__button-apply {
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.goods__button-clear {
+  width: 100%;
+}
+
+// Список товаров
+
+.goods__list {
+  width: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    width: 100%;
+    padding: 50px 0 0 0;
+  }
+}
+
+.goods__list ul {
+  width: 100%;
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr;
+  gap: 25px;
+  justify-items: center;
+
+  @include mobile {
+    grid-template-columns: 0.8fr 0.8fr;
+  }
+}
+
+.goods__list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goods__list figure {
+  margin: 0;
+  padding: 0;
+}
+
+.goods__list img {
+  object-fit: cover;
+
+  @include tablet {
+    width: 206px;
+    height: 208px;
+  }
+
+  @include mobile {
+    height: 136px;
+  }
+}
+
+.goods__list figcaption {
+  display: block;
+  margin: 25px 0 15px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+  text-align: center;
+
+  @include poppins-medium;
+}
+
+.goods__list b {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 18 / 14 *100%;
+  color: $dark;
+
+  @include poppins-bold;
+}
+
+// Пагинация списка товаров
+
+.goods__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.goods__pagination ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: auto;
+}
+
+.goods__pagination li {
+  margin: 0 0 0 15px;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $pale-text;
+  cursor: pointer;
+
+  @include poppins-medium;
+
+  @include mobile {
+    margin: 0 0 0 25px;
+  }
+}
+
+.goods__pagination li:hover {
+  color: $black;
+}
+
+.goods__pagination li:first-child {
+  color: $dark;
+}
+
+.goods__pagination-button-previous {
+  display: block;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+  cursor: pointer;
+
+  @include poppins-medium;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.goods__pagination-button-previous:hover {
+  color: $black;
+  text-decoration: underline;
+}
+
+.goods__pagination-button-next {
+  display: block;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+  cursor: pointer;
+
+  @include poppins-medium;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.goods__pagination-button-next:hover {
+  color: $black;
+  text-decoration: underline;
+}

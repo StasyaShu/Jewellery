@@ -91,6 +91,10 @@
 
 // Главный логотип
 
+.page-header__logo {
+  display: block;
+}
+
 .page-header__logo svg {
   fill: $brown-main;
 }

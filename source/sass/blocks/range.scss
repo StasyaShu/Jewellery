@@ -1,0 +1,51 @@
+.range {
+  position: relative;
+}
+
+.range__scale {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background-color: $beige;
+}
+
+.range__bar {
+  position: absolute;
+  top: 0;
+  left: 37px;
+  width: 60%;
+  height: 1px;
+  background-color: $brown-main;
+}
+
+.range__toggle span {
+  font-size: 14px;
+  line-height: 18 / 14 *100%;
+  color: $dark;
+  display: block;
+  width: 35px;
+  margin: 20px 0 0 0;
+
+  @include poppins-medium;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: $brown-main;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.range__toggle--min {
+  left: 31px;
+  top: -7px;
+}
+
+.range__toggle--max {
+  left: 133px;
+  top: -7px;
+}

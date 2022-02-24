@@ -1,0 +1,9 @@
+.page-catalog {
+  flex: 1 1 auto;
+  z-index: 1;
+  padding: 163px 0 0 0;
+
+  @include tablet {
+    padding: 120px 0 0 0;
+  }
+}

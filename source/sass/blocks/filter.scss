@@ -1,0 +1,96 @@
+.filter{
+  margin: 0 0 35px 0;
+}
+
+.filter__tab {
+  position: relative;
+  padding: 50px 38px 30px;
+
+  @include mobile {
+    padding: 50px 18px 30px;
+  }
+}
+
+.filter__tab:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: $brown-main;
+}
+
+.filter__title {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+
+  @include poppins-medium;
+}
+
+.filter__tab-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+  width: 100%;
+}
+
+.filter__tab-content label {
+  cursor: pointer;
+  position: relative;
+  padding: 0 0 0 25px;
+  font-size: 14px;
+  line-height: 18 / 14 *100%;
+  color: $dark;
+
+  @include poppins-medium;
+}
+
+.filter__tab-content input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $brown-main;
+  background-color: transparent;
+}
+
+.filter__tab-content input:hover + label::before {
+  background-color: $brown-main;
+}
+
+.filter__tab-content input:checked + label::before {
+  background-color: $brown-main;
+}
+
+.filter__tab-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__tab-content li {
+  display: flex;
+  align-items: center;
+}
+
+.filter__tab-content li:not(:last-child) {
+  margin: 0 0 25px 0;
+}
+
+.filter__range-controls {
+  margin: 9px 0 23px 0;
+}
+
+.filter__button-apply {
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.filter__button-clear {
+  width: 100%;
+}
