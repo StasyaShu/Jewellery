@@ -15,6 +15,7 @@
   max-width: 100%;
   display: block;
   background-color: $beige;
+  object-fit: cover;
 
   @include tablet {
     width: 339px;
