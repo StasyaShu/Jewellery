@@ -64,6 +64,7 @@
     "source/sass/**/*.scss"
   ],
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "swiper": "^8.0.6"
   }
 }
