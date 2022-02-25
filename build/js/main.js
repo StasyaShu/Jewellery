@@ -78,17 +78,17 @@ const handleAccordion = (() => {
 })();
 
 handleAccordion.manageAccordion(); // Слайдер Swiper
-// const swiper = new Swiper('.swiper', {
-//   navigation: {
-//     nextEl: '.swiper-button-next-slide',
-//     prevEl: '.swiper-button-prev-slide',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
-// Появление попапа с фильтром
+
+new Swiper('.slider-swiper', {
+  navigation: {
+    nextEl: '.swiper-button-next-slide',
+    prevEl: '.swiper-button-prev-slide'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
+}); // Появление попапа с фильтром
 
 const handlePopup = (() => {
   const filterButton = document.querySelector('.goods__button-filter');

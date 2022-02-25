@@ -1,5 +1,5 @@
 // General
-@import 'swiper/css/bundle';
+// @import 'swiper/css/bundle';
 
 @import "general/fonts.scss";
 @import "general/variables.scss";
@@ -27,7 +27,9 @@
 @import "blocks/blog-card.scss";
 @import "blocks/questions.scss";
 @import "blocks/follow-us.scss";
-@import "blocks/swiper.scss";
+@import "blocks/slider-swiper.scss";
+// @import "blocks/swiper-vars.scss";
+// @import "blocks/swiper.scss";
 
 // Blocks - Catalog page
 
@@ -39,5 +41,9 @@
 @import "blocks/range.scss";
 @import "blocks/popup-filter.scss";
 @import "blocks/filter.scss";
+
+// Blocks - Login page
+
+@import "blocks/page-login.scss";
 
 

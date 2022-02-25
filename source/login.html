@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Тренировочный проект от HTML Academy: Jewellery. Выполнила студент Шулепова С.В.">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <title>HTML Academy: Проект Акселератора Jewellery</title>
-  </head>
-<body class="page__body">
-  <div>LOGIN</div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тренировочный проект от HTML Academy: Jewellery. Выполнила студент Шулепова С.В.">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <title>HTML Academy: Проект Акселератора Jewellery</title>
+</head>
+
+<body class="page__body login-body">
+  <main class="page-login">
+    <h1 class="visually-hidden">Страница формы входа в личный кабинет</h1>
+    <div class="page-login__wrapper">
+      <div class="page-login__logo">
+        <a href="main.html" aria-label="Логотип-ссылка переход на главную страницу">
+          <svg width="66" height="66" viewBox="0 0 66 66">
+            <use xlink:href="img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
+      <button class="page-login__close-button">
+        <svg width="14" height="14" viewBox="0 0 14 14">
+          <use xlink:href="img/sprite.svg#icon-close-login"></use>
+        </svg>
+      </button>
+      <div class="page-login__form">
+        <h2>Log In</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
+          <ul>
+            <li>
+              <input type="email" placeholder="Your E-mail" name="email" id="email" required>
+              <label class="visually-hidden" for="email">Ваш логин-электронный адрес</label>
+            </li>
+            <li>
+              <input type="password" placeholder="Password" name="password" id="password" required>
+              <label class="visually-hidden" for="password">Ваш пароль</label>
+              <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
+            </li>
+          </ul>
+          <button type="submit" class="button-action">Log In</button>
+          <div class="page-login__sign-up">
+            <p>Don’t have an account?</p>
+            <a href="" aria-label="Нажмите, чтобы зарегистрироваться">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
 
 </body>
+
 </html>

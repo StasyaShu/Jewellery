@@ -87,18 +87,19 @@ handleAccordion.manageAccordion();
 
 // Слайдер Swiper
 
-// const swiper = new Swiper('.swiper', {
 
-//   navigation: {
-//     nextEl: '.swiper-button-next-slide',
-//     prevEl: '.swiper-button-prev-slide',
-//   },
+new Swiper('.slider-swiper', {
 
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
+  navigation: {
+    nextEl: '.swiper-button-next-slide',
+    prevEl: '.swiper-button-prev-slide',
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
 // Появление попапа с фильтром
 

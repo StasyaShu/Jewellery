@@ -6,10 +6,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
-const rollup = require('rollup-stream');
 const babel = require('gulp-babel');
 const buffer = require('vinyl-buffer');
-const source = require('vinyl-source-stream');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
@@ -43,18 +41,12 @@ exports.html = html;
 
 // Scripts
 
-const scripts = () => {
-  return rollup({
-      input: 'source/js/main.js',
-      format: 'es',
-  })
-  .pipe(source('main.js'))
+const scripts = () => gulp.src('source/js/**/*.js')
   .pipe(buffer())
   .pipe(babel({
       presets: ['@babel/preset-env']
   }))
   .pipe(gulp.dest('build/js'));
-};
 
 exports.scripts = scripts;
 
