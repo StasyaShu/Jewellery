@@ -13,7 +13,7 @@
   position: absolute;
   top: 0;
   left: 37px;
-  width: 60%;
+  width: 64%;
   height: 1px;
   background-color: $brown-main;
 }
@@ -30,6 +30,7 @@
 }
 
 .range__toggle {
+  cursor: pointer;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -46,6 +47,6 @@
 }
 
 .range__toggle--max {
-  left: 133px;
+  left: 76%;
   top: -7px;
 }

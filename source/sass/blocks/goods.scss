@@ -33,6 +33,10 @@
 .goods__accordion {
   border: 1px solid $brown-main;
   margin: 0 0 35px 0;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .goods__tab {

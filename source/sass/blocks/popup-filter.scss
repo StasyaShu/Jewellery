@@ -1,9 +1,12 @@
 .popup-filter {
   display: block;
+  max-width: 334px;
   position: absolute;
-  top: 0;
+  top: 382px;
   left: 0;
   width: 100%;
+  z-index: 5;
+  background-color: $white;
 }
 
 .popup-filter--hide {
@@ -34,4 +37,12 @@
   background-image: url("../img/icon-close-white.svg");
   background-repeat: no-repeat;
   background-position: 7px 7px;
+}
+
+.popup-filter__close-button:hover {
+  box-shadow: 0 0 3px 3px $pale-text;
+}
+
+.popup-filter__close-button:active {
+  box-shadow: 0 0 3px 3px $dark;
 }
