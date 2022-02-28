@@ -18,24 +18,45 @@ const handleMobileMenu = (() => {
           }
         });
       }
-    } // clickNavLink: () => {
-    //   const siteNavigation = document.querySelector('.main-nav');
-    //   const siteNavigationList = siteNavigation.querySelector('ul');
-    //   const siteNavigationItems = siteNavigationList.children;
-    //   for (const item of siteNavigationItems) {
-    //     item.addEventListener('click', () => {
-    //       siteNavigation.classList.remove('main-nav--opened');
-    //       siteNavigation.classList.add('main-nav--closed');
-    //       body.style.overflow = 'scroll';
-    //     })
-    //   }
-    // }
-
+    }
   };
 })();
 
-handleMobileMenu.showNav(); // handleMobileMenu.clickNavLink();
-// Аккордеон
+handleMobileMenu.showNav(); // Попап логин
+
+const handleLoginPopup = (() => {
+  const loginButton = document.querySelector('.page-header__link--login');
+  const loginPopup = document.querySelector('.popup-login');
+  const loginPopupCloseButton = document.querySelector('.popup-login__close-button');
+  const popupOverlay = document.querySelector('.overlay');
+  const ESC_KEY_CODE = 27;
+  return {
+    showPopup: () => {
+      if (loginButton) {
+        loginButton.addEventListener('click', evt => {
+          evt.preventDefault();
+          loginPopup.classList.remove('popup-login--hide');
+          popupOverlay.classList.add('overlay--active');
+          const popupInputEmail = document.getElementById('email-popup');
+          popupInputEmail.focus();
+        });
+        document.addEventListener('keydown', evt => {
+          if (evt.keyCode === ESC_KEY_CODE) {
+            loginPopup.classList.add('popup-login--hide');
+            popupOverlay.classList.remove('overlay--active');
+          }
+        });
+        loginPopupCloseButton.addEventListener('click', evt => {
+          evt.preventDefault();
+          loginPopup.classList.add('popup-login--hide');
+          popupOverlay.classList.remove('overlay--active');
+        });
+      }
+    }
+  };
+})();
+
+handleLoginPopup.showPopup(); // Аккордеон
 
 const handleAccordion = (() => {
   const accordion = document.getElementById('accordion');
@@ -78,17 +99,17 @@ const handleAccordion = (() => {
 })();
 
 handleAccordion.manageAccordion(); // Слайдер Swiper
-
-new Swiper('.slider-swiper', {
-  navigation: {
-    nextEl: '.swiper-button-next-slide',
-    prevEl: '.swiper-button-prev-slide'
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-}); // Появление попапа с фильтром
+// new Swiper('.slider-swiper', {
+//   navigation: {
+//     nextEl: '.swiper-button-next-slide',
+//     prevEl: '.swiper-button-prev-slide',
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+// });
+// Появление попапа с фильтром
 
 const handlePopup = (() => {
   const filterButton = document.querySelector('.goods__button-filter');
@@ -156,4 +177,22 @@ const handlePopup = (() => {
 })();
 
 handlePopup.showPopup();
-handlePopup.useFilterAccordion();
+handlePopup.useFilterAccordion(); // Валидатор поля пароля
+
+(function validatePassword() {
+  const inputsPassword = document.querySelectorAll('input[type*="password"]');
+
+  for (let input of inputsPassword) {
+    input.addEventListener('invalid', () => {
+      if (input.validity.valueMissing) {
+        input.setCustomValidity('Введите пожалуйста Ваш пароль');
+      } else if (input.value.length < 8) {
+        input.setCustomValidity('Пароль должен состоять минимум из 8ми символов');
+      } else if (input.validity.patternMismatch) {
+        input.setCustomValidity('Пароль должен содержать хотя бы одну цифру, одну латинскую букву в верхнем регистре и одну в нижнем');
+      } else {
+        input.setCustomValidity('');
+      }
+    });
+  }
+})();

@@ -1,0 +1,183 @@
+.popup-login {
+  display: block;
+  width: 39%;
+  position: absolute;
+  top: 120px;
+  left: 33%;
+  z-index: 5;
+  background-color: $beige;
+
+  @include tablet {
+    width: 95%;
+    left: 0;
+    margin: 0 20px;
+    top: 140px;
+  }
+
+  @include mobile {
+    width: 88%;
+  }
+}
+
+.popup-login--hide {
+  display: none;
+}
+
+.popup-login picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.popup-login img {
+  object-fit: cover;
+
+  @include mobile {
+    height: 84px;
+  }
+}
+
+.popup-login__wrapper {
+  position: relative;
+  padding: 195px 45px 60px;
+
+  @include tablet {
+    padding: 195px 25px 60px;
+  }
+
+  @include mobile {
+    padding: 112px 12px 47px;
+  }
+}
+
+.popup-login__close-button {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  width: 14px;
+  height: 14px;
+}
+
+.popup-login__close-button svg {
+  fill: $dark;
+}
+
+.popup-login__close-button:hover svg {
+  fill: $white;
+}
+
+.popup-login__close-button:active svg {
+  opacity: 0.3;
+}
+
+.popup-login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-login__form h2 {
+  display: block;
+  margin: 0 0 25px 0;
+  padding: 0;
+  font-size: 34px;
+  line-height: 44 / 34 *100%;
+  color: $dark;
+  text-align: center;
+
+  @include cormorant-bold;
+
+  @include mobile {
+    font-size: 24px;
+  }
+}
+
+.popup-login__form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.popup-login__form li {
+  margin: 0 0 35px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-login__form li:last-child a {
+  display: block;
+  padding: 9px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: $pale-text;
+  align-self: flex-end;
+
+  @include poppins-medium;
+}
+
+.popup-login__form li:last-child a:hover {
+  color: $dark;
+}
+
+.popup-login__form input {
+  border: none;
+  background: transparent;
+  padding: 9px 9px;
+  border-bottom: 1px solid $dark;
+}
+
+.popup-login__form input:hover {
+  border: 1px solid $pink;
+}
+
+.popup-login__form input:focus {
+  background: $pink;
+}
+
+.popup-login__form input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: $pale-text;
+
+  @include poppins-medium;
+}
+
+.popup-login__sign-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 0;
+}
+
+.popup-login__sign-up p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: $pale-text;
+
+  @include poppins-medium;
+}
+
+.popup-login__sign-up a {
+  display: block;
+  margin: 0 0 0 10px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark;
+
+  @include poppins-medium;
+}
+
+.popup-login__sign-up a:hover {
+  box-shadow: 0 0 2px 2px $pale-text;
+}
+
+.popup-login__sign-up a:active {
+  box-shadow: 0 0 3px 3px $dark;
+}
