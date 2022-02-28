@@ -99,17 +99,60 @@ const handleAccordion = (() => {
 })();
 
 handleAccordion.manageAccordion(); // Слайдер Swiper
-// new Swiper('.slider-swiper', {
-//   navigation: {
-//     nextEl: '.swiper-button-next-slide',
-//     prevEl: '.swiper-button-prev-slide',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
-// Появление попапа с фильтром
+
+new Swiper('.slider-swiper', {
+  navigation: {
+    nextEl: '.slider-swiper__button-next-slide',
+    prevEl: '.slider-swiper__button-prev-slide'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  spaceBetween: 30,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      simulateTouch: true,
+      touchRatio: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: false,
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return `<ul><li class="${currentClass}"></li><li>of</li><li class="${totalClass}"></li></ul>`;
+        }
+      }
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      simulateTouch: true,
+      touchRatio: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className}">${index + 1}</span>`;
+        }
+      }
+    },
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      simulateTouch: false,
+      touchRatio: 0,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className}">${index + 1}</span>`;
+        }
+      }
+    }
+  }
+}); // Появление попапа с фильтром
 
 const handlePopup = (() => {
   const filterButton = document.querySelector('.goods__button-filter');

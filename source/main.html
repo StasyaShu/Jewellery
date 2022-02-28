@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Тренировочный проект от HTML Academy: Jewellery. Выполнила студент Шулепова С.В.">
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -75,199 +75,225 @@
     <section class="slider-main">
       <h2 class="visually-hidden">Слайды с продукцией</h2>
       <div class="slider-main__wrapper">
-        <p>New In</p>
-        <a href="catalog.html" aria-label="Ссылка переход на страницу каталога">Shop Now</a>
-
-        <!-- Slider Swiper main container -->
         <div class="slider-swiper swiper">
+          <div class="slider-swiper__header">
+            <div class="slider-swiper__button-prev-slide">
+              <svg width="30" height="11" viewBox="0 0 30 11">
+                <use xlink:href="img/sprite.svg#icon-prev-slide-desktop"></use>
+              </svg>
+            </div>
+            <div class="slider-swiper__title">
+              <p>New In</p>
+              <a href="catalog.html" aria-label="Ссылка переход на страницу каталога">Shop Now</a>
+            </div>
+            <div class="slider-swiper__button-next-slide">
+              <svg width="30" height="11" viewBox="0 0 30 11">
+                <use xlink:href="img/sprite.svg#icon-next-slide-desktop"></use>
+              </svg>
+            </div>
+          </div>
           <div class="slider-swiper__wrapper swiper-wrapper">
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
-                  <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Подвеска с фиолетовым аметистом">
-                </picture>
-                <figcaption>Necklace with amethyst</figcaption>
-              </figure>
-              <b>$ 145</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
+                    <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Подвеска с фиолетовым аметистом">
+                  </picture>
+                  <figcaption>Necklace with amethyst</figcaption>
+                </figure>
+                <b>$ 145</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
-                  <img src="img/slider-main-black-choker-desktop@1x.jpg"
-                    srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
-                    alt="Черное слоеное колье">
-                </picture>
-                <figcaption>Layered сhoker</figcaption>
-              </figure>
-              <b>$ 115</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
+                    <img src="img/slider-main-black-choker-desktop@1x.jpg"
+                      srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
+                      alt="Черное слоеное колье">
+                  </picture>
+                  <figcaption>Layered сhoker</figcaption>
+                </figure>
+                <b>$ 115</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-gold-mobile@1x.webp 1x, img/slider-main-gold-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-gold-tablet@1x.webp 1x, img/slider-main-gold-tablet@2x.webp 2x">
-                  <img src="img/slider-main-gold-desktop@1x.jpg" srcset="img/slider-main-gold-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Золотая многоуровневая цепочка">
-                </picture>
-                <figcaption>Gold chain</figcaption>
-              </figure>
-              <b>$ 215</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-gold-mobile@1x.webp 1x, img/slider-main-gold-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-gold-tablet@1x.webp 1x, img/slider-main-gold-tablet@2x.webp 2x">
+                    <img src="img/slider-main-gold-desktop@1x.jpg" srcset="img/slider-main-gold-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Золотая многоуровневая цепочка">
+                  </picture>
+                  <figcaption>Gold chain</figcaption>
+                </figure>
+                <b>$ 215</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-earrings-mobile@1x.webp 1x, img/slider-main-earrings-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-earrings-tablet@1x.webp 1x, img/slider-main-earrings-tablet@2x.webp 2x">
-                  <img src="img/slider-main-earrings-desktop@1x.jpg" srcset="img/slider-main-earrings-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Сверкающие сережки">
-                </picture>
-                <figcaption>Galaxy earrings</figcaption>
-              </figure>
-              <b>$ 95</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-earrings-mobile@1x.webp 1x, img/slider-main-earrings-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-earrings-tablet@1x.webp 1x, img/slider-main-earrings-tablet@2x.webp 2x">
+                    <img src="img/slider-main-earrings-desktop@1x.jpg"
+                      srcset="img/slider-main-earrings-desktop@2x.jpg 2x" width="270" height="284"
+                      alt="Сверкающие сережки">
+                  </picture>
+                  <figcaption>Galaxy earrings</figcaption>
+                </figure>
+                <b>$ 95</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
-                  <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Подвеска с фиолетовым аметистом">
-                </picture>
-                <figcaption>Necklace with amethyst</figcaption>
-              </figure>
-              <b>$ 145</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
+                    <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Подвеска с фиолетовым аметистом">
+                  </picture>
+                  <figcaption>Necklace with amethyst</figcaption>
+                </figure>
+                <b>$ 145</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
-                  <img src="img/slider-main-black-choker-desktop@1x.jpg"
-                    srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
-                    alt="Черное слоеное колье">
-                </picture>
-                <figcaption>Layered сhoker</figcaption>
-              </figure>
-              <b>$ 115</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
+                    <img src="img/slider-main-black-choker-desktop@1x.jpg"
+                      srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
+                      alt="Черное слоеное колье">
+                  </picture>
+                  <figcaption>Layered сhoker</figcaption>
+                </figure>
+                <b>$ 115</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
-                  <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Подвеска с фиолетовым аметистом">
-                </picture>
-                <figcaption>Necklace with amethyst</figcaption>
-              </figure>
-              <b>$ 145</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
+                    <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Подвеска с фиолетовым аметистом">
+                  </picture>
+                  <figcaption>Necklace with amethyst</figcaption>
+                </figure>
+                <b>$ 145</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
-                  <img src="img/slider-main-black-choker-desktop@1x.jpg"
-                    srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
-                    alt="Черное слоеное колье">
-                </picture>
-                <figcaption>Layered сhoker</figcaption>
-              </figure>
-              <b>$ 115</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
+                    <img src="img/slider-main-black-choker-desktop@1x.jpg"
+                      srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
+                      alt="Черное слоеное колье">
+                  </picture>
+                  <figcaption>Layered сhoker</figcaption>
+                </figure>
+                <b>$ 115</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
-                  <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Подвеска с фиолетовым аметистом">
-                </picture>
-                <figcaption>Necklace with amethyst</figcaption>
-              </figure>
-              <b>$ 145</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
+                    <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Подвеска с фиолетовым аметистом">
+                  </picture>
+                  <figcaption>Necklace with amethyst</figcaption>
+                </figure>
+                <b>$ 145</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
-                  <img src="img/slider-main-black-choker-desktop@1x.jpg"
-                    srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
-                    alt="Черное слоеное колье">
-                </picture>
-                <figcaption>Layered сhoker</figcaption>
-              </figure>
-              <b>$ 115</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
+                    <img src="img/slider-main-black-choker-desktop@1x.jpg"
+                      srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
+                      alt="Черное слоеное колье">
+                  </picture>
+                  <figcaption>Layered сhoker</figcaption>
+                </figure>
+                <b>$ 115</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
-                  <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
-                    width="270" height="284" alt="Подвеска с фиолетовым аметистом">
-                </picture>
-                <figcaption>Necklace with amethyst</figcaption>
-              </figure>
-              <b>$ 145</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-purple-mobile@1x.webp 1x, img/slider-main-purple-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-purple-tablet@1x.webp 1x, img/slider-main-purple-tablet@2x.webp 2x">
+                    <img src="img/slider-main-purple-desktop@1x.jpg" srcset="img/slider-main-purple-desktop@2x.jpg 2x"
+                      width="270" height="284" alt="Подвеска с фиолетовым аметистом">
+                  </picture>
+                  <figcaption>Necklace with amethyst</figcaption>
+                </figure>
+                <b>$ 145</b>
+              </div>
             </div>
             <div class="slider-swiper__slide swiper-slide">
-              <figure>
-                <picture>
-                  <source type="image/webp" media="(max-width: 767.99px)"
-                    srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023.99px)"
-                    srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
-                  <img src="img/slider-main-black-choker-desktop@1x.jpg"
-                    srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
-                    alt="Черное слоеное колье">
-                </picture>
-                <figcaption>Layered сhoker</figcaption>
-              </figure>
-              <b>$ 115</b>
+              <div class="slider-swiper__content">
+                <figure>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767.99px)"
+                      srcset="img/slider-main-black-choker-mobile@1x.webp 1x, img/slider-main-black-choker-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023.99px)"
+                      srcset="img/slider-main-black-choker-tablet@1x.webp 1x, img/slider-main-black-choker-tablet@2x.webp 2x">
+                    <img src="img/slider-main-black-choker-desktop@1x.jpg"
+                      srcset="img/slider-main-black-choker-desktop@2x.jpg 2x" width="270" height="284"
+                      alt="Черное слоеное колье">
+                  </picture>
+                  <figcaption>Layered сhoker</figcaption>
+                </figure>
+                <b>$ 115</b>
+              </div>
             </div>
           </div>
           <div class="swiper-pagination"></div>
-          <div class="slider-swiper__button-prev-slide">
-            <svg width="30" height="11" viewBox="0 0 30 11">
-              <use xlink:href="img/sprite.svg#icon-prev-slide-desktop"></use>
-            </svg>
-          </div>
-          <div class="slider-swiper__button-next-slide">
-            <svg width="30" height="11" viewBox="0 0 30 11">
-              <use xlink:href="img/sprite.svg#icon-next-slide-desktop"></use>
-            </svg>
-          </div>
         </div>
-
       </div>
     </section>
     <section class="blog-main">
@@ -545,8 +571,8 @@
         srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
       <source type="image/webp" media="(max-width: 1023.99px)"
         srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
-      <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x"
-        width="100%" height="138" alt="Фоновое изображение украшений из золота и жемчуга">
+      <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" width="100%" height="138"
+        alt="Фоновое изображение украшений из золота и жемчуга">
     </picture>
     <div class="popup-login__wrapper">
       <button class="popup-login__close-button">
@@ -563,7 +589,8 @@
               <label class="visually-hidden" for="email">Ваш логин-электронный адрес</label>
             </li>
             <li>
-              <input type="password" placeholder="Password" name="password" id="password" min="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+              <input type="password" placeholder="Password" name="password" id="password" min="8"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
               <label class="visually-hidden" for="password">Ваш пароль</label>
               <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
             </li>
