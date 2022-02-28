@@ -37,7 +37,7 @@
       </a>
       <div class="page-header__links">
         <a class="page-header__link page-header__link--login" href="login.html"
-          aria-label="Ссылка-переход на страницу формы входа в личный кабинет" id="login-id">Login</a>
+          aria-label="Ссылка-переход на страницу формы входа в личный кабинет">Login</a>
         <a class="page-header__link page-header__link--cart" href="" aria-label="Ссылка для перехода в корзину товаров">
           <svg width="20" height="18" viewBox="0 0 20 18">
             <use xlink:href="img/sprite.svg#icon-busket"></use>
@@ -59,7 +59,7 @@
           <li><a href="" aria-label="Контактные данные">Contact Us</a></li>
         </ul>
         <a class="page-header__menu-link-login" href="login.html"
-          aria-label="Ссылка-переход на страницу формы входа в личный кабинет" id="login-id">Login</a>
+          aria-label="Ссылка-переход на страницу формы входа в личный кабинет">Login</a>
       </nav>
     </div>
   </header>
@@ -315,7 +315,7 @@
                   height="300" alt="Набор золотых украшений">
               </picture>
               <div class="blog-main__content">
-                <time pubdate datetime="2019-09-30">September 30, 2019</time>
+                <time datetime="2019-09-30">September 30, 2019</time>
                 <b>How to care for your jewellery</b>
                 <a href="" aria-label="Ссылка-переход к статье по уходу за украшениями">Read Article</a>
               </div>
@@ -332,7 +332,7 @@
                   width="285" height="300" alt="Урашение из янтаря">
               </picture>
               <div class="blog-main__content">
-                <time pubdate datetime="2019-09-23">September 23, 2019</time>
+                <time datetime="2019-09-23">September 23, 2019</time>
                 <b>Power of crystals</b>
                 <a href="" aria-label="Ссылка-переход к статье по уходу за украшениями">Read Article</a>
               </div>
@@ -349,7 +349,7 @@
                   height="630" alt="Браслеты и кольца на руках у девушки">
               </picture>
               <div class="blog-main__content">
-                <time pubdate datetime="2019-09-16">September 16, 2019</time>
+                <time datetime="2019-09-16">September 16, 2019</time>
                 <b>AW 19 trends</b>
                 <a href="" aria-label="Ссылка-переход к статье по уходу за украшениями">Read Article</a>
               </div>
@@ -364,14 +364,14 @@
         <div class="questions__accordion" id="accordion">
           <div class="questions__tab">
             <h3 class="questions__title accordion-title">What materials are the jewellery made of?</h3>
-            <div class="questions__text" id="tab-content">
+            <div class="questions__text tab-content">
               <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
                 semiprecious stones and crystals.</p>
             </div>
           </div>
           <div class="questions__tab">
             <h3 class="questions__title accordion-title">Which countries do you deliver to?</h3>
-            <div class="questions__text" id="tab-content">
+            <div class="questions__text tab-content">
               <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
                 semiprecious stones and crystals.Our jewellerry is made of solid gold, silver or leather. Also, some
                 jewellery contains precious and
@@ -382,14 +382,14 @@
           </div>
           <div class="questions__tab">
             <h3 class="questions__title accordion-title">What are the payment methods?</h3>
-            <div class="questions__text" id="tab-content">
+            <div class="questions__text tab-content">
               <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
                 semiprecious stones and crystals.</p>
             </div>
           </div>
           <div class="questions__tab">
             <h3 class="questions__title accordion-title">Can I return the jewellery if it didn’t fit me?</h3>
-            <div class="questions__text" id="tab-content">
+            <div class="questions__text tab-content">
               <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
                 semiprecious stones and crystals.</p>
             </div>
@@ -571,7 +571,7 @@
         srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
       <source type="image/webp" media="(max-width: 1023.99px)"
         srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
-      <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" width="100%" height="138"
+      <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" height="138"
         alt="Фоновое изображение украшений из золота и жемчуга">
     </picture>
     <div class="popup-login__wrapper">
@@ -586,11 +586,10 @@
           <ul>
             <li>
               <input type="email" placeholder="Your E-mail" name="email-popup" id="email-popup" required>
-              <label class="visually-hidden" for="email">Ваш логин-электронный адрес</label>
+              <label class="visually-hidden" for="email-popup">Ваш логин-электронный адрес</label>
             </li>
             <li>
-              <input type="password" placeholder="Password" name="password" id="password" min="8"
-                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+              <input type="password" placeholder="Password" name="password" id="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
               <label class="visually-hidden" for="password">Ваш пароль</label>
               <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
             </li>

@@ -69,7 +69,7 @@ const handleAccordion = (() => {
 
   const hideAll = () => {
     const h3El = accordion.querySelectorAll('h3');
-    const divEl = accordion.querySelectorAll('#tab-content');
+    const divEl = accordion.querySelectorAll('.tab-content');
 
     for (let i = 0; i < h3El.length; i++) {
       h3El[i].classList.remove('accordion-title--select');
@@ -207,7 +207,7 @@ const handlePopup = (() => {
 
       const hideAll = () => {
         const h3El = filterAccordion.querySelectorAll('h3');
-        const divEl = filterAccordion.querySelectorAll('#tab-content');
+        const divEl = filterAccordion.querySelectorAll('.tab-content');
 
         for (let i = 0; i < h3El.length; i++) {
           h3El[i].classList.remove('accordion-title--select');
