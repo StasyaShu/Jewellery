@@ -1,4 +1,4 @@
-.filter{
+.filter {
   margin: 0 0 35px 0;
 }
 
@@ -46,7 +46,7 @@
   @include poppins-medium;
 }
 
-.filter__tab-content input + label::before {
+.filter__tab-content input+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -57,11 +57,11 @@
   background-color: transparent;
 }
 
-.filter__tab-content input:hover + label::before {
+.filter__tab-content input:hover+label::before {
   background-color: $brown-main;
 }
 
-.filter__tab-content input:checked + label::before {
+.filter__tab-content input:checked+label::before {
   background-color: $brown-main;
 }
 
@@ -84,13 +84,4 @@
 
 .filter__range-controls {
   margin: 9px 0 23px 0;
-}
-
-.filter__button-apply {
-  width: 100%;
-  margin: 0 0 25px 0;
-}
-
-.filter__button-clear {
-  width: 100%;
 }

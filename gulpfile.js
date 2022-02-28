@@ -7,6 +7,7 @@ const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
+const minify = require('gulp-minify');
 const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -44,8 +45,9 @@ exports.html = html;
 const scripts = () => gulp.src('source/js/**/*.js')
   .pipe(buffer())
   .pipe(babel({
-      presets: ['@babel/preset-env']
+    presets: ['@babel/preset-env']
   }))
+  .pipe(minify())
   .pipe(gulp.dest('build/js'));
 
 exports.scripts = scripts;
@@ -54,8 +56,12 @@ exports.scripts = scripts;
 
 const images = () => gulp.src('source/img/**/*.{png,jpg,svg}')
   .pipe(imagemin([
-    imagemin.mozjpeg({ progressive: true }),
-    imagemin.optipng({ optimizationLevel: 3 }),
+    imagemin.mozjpeg({
+      progressive: true
+    }),
+    imagemin.optipng({
+      optimizationLevel: 3
+    }),
     imagemin.svgo(),
   ]))
   .pipe(gulp.dest('build/img'));
@@ -65,13 +71,17 @@ exports.images = images;
 // Webp
 
 const createWebp = () => gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(webp({quality: 90}))
+  .pipe(webp({
+    quality: 90
+  }))
   .pipe(gulp.dest('build/img'));
 
 exports.createWebp = createWebp;
 
 const createWebpDev = () => gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(webp({quality: 90}))
+  .pipe(webp({
+    quality: 90
+  }))
   .pipe(gulp.dest('source/img'));
 
 exports.createWebpDev = createWebpDev;
@@ -79,7 +89,9 @@ exports.createWebpDev = createWebpDev;
 // Sprite
 
 const sprite = () => gulp.src('source/img/**/*.svg')
-  .pipe(svgstore({inlineSvg: true}))
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img'));
 
@@ -89,12 +101,12 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.{ico,svg}',
-    'source/img/**/*.{jpg,png,svg}',
-  ], {
-    base: 'source',
-  })
+      'source/fonts/*.{woff2,woff}',
+      'source/*.{ico,svg}',
+      'source/img/**/*.{jpg,png,svg}',
+    ], {
+      base: 'source',
+    })
     .pipe(gulp.dest('build'));
   done();
 };

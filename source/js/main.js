@@ -62,7 +62,7 @@ const handleLoginPopup = (() => {
 })()
 handleLoginPopup.showPopup();
 
-// Аккордеон
+// Аккордеон на главной странице
 
 const handleAccordion = (() => {
   const accordion = document.getElementById('accordion');
@@ -170,7 +170,7 @@ new Swiper('.slider-swiper', {
 });
 
 
-// Появление попапа с фильтром
+// Появление попапа с фильтром на странице каталога
 
 const handlePopup = (() => {
   const filterButton = document.querySelector('.goods__button-filter');
@@ -187,6 +187,7 @@ const handlePopup = (() => {
           evt.preventDefault();
           filterPopup.classList.remove('popup-filter--hide');
           popupOverlay.classList.add('overlay--active');
+          scrollTo({top: 320, behavior: 'smooth'});
         })
         document.addEventListener('keydown', (evt) => {
           if (evt.keyCode === ESC_KEY_CODE) {
@@ -205,20 +206,12 @@ const handlePopup = (() => {
     useFilterAccordion: () => {
       const filterAccordion = document.querySelector('.filter');
 
-      const hideAll = () => {
-        const h3El = filterAccordion.querySelectorAll('h3');
-        const divEl = filterAccordion.querySelectorAll('.tab-content');
-
-        for (let i = 0; i < h3El.length; i++) {
-          h3El[i].classList.remove('accordion-title--select');
-        }
-        for (let i = 0; i < divEl.length; i++) {
-          divEl[i].style.height = '0';
-        }
-      }
-
       const showText = (textEl) => {
         textEl.style.height = textEl.scrollHeight + 'px';
+      }
+
+      const hideText = (textItem) => {
+        textItem.style.height = '0';
       }
 
       if (filterAccordion) {
@@ -228,12 +221,12 @@ const handlePopup = (() => {
           const targ = evt.target;
           if (targ.tagName !== 'H3') return;
 
-          if (targ.classList.contains('accordion-title--select')) {
-            hideAll();
-          } else {
-            hideAll();
+          if (!targ.classList.contains('accordion-title--select')) {
             targ.classList.add('accordion-title--select');
             showText(targ.nextElementSibling);
+          } else {
+            targ.classList.remove('accordion-title--select');
+            hideText(targ.nextElementSibling);
           }
         })
       }

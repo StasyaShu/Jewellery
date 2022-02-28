@@ -75,6 +75,11 @@
   top: 20px;
   right: 10px;
   border: none;
+
+  @include mobile {
+    top: 11px;
+    right: 0;
+  }
 }
 
 .page-login__close-button p {

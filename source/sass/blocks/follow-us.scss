@@ -87,6 +87,10 @@
   }
 }
 
+.follow-us__wrapper li img {
+  object-fit: cover;
+}
+
 .follow-us__wrapper li:nth-child(-n+3) img {
   @include tablet {
     width: 133px;

@@ -46,3 +46,11 @@
 .popup-filter__close-button:active {
   box-shadow: 0 0 3px 3px $dark;
 }
+
+.popup-filter__button {
+  width: 100%;
+}
+
+.popup-filter__button:first-of-type {
+  margin: 0 0 25px 0;
+}
