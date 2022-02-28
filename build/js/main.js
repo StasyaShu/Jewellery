@@ -118,10 +118,10 @@ new Swiper('.slider-swiper', {
       touchRatio: 1,
       pagination: {
         el: '.swiper-pagination',
-        clickable: false,
         type: 'fraction',
+        clickable: false,
         renderFraction: function (currentClass, totalClass) {
-          return `<ul><li class="${currentClass}"></li><li>of</li><li class="${totalClass}"></li></ul>`;
+          return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
         }
       }
     },
@@ -132,9 +132,10 @@ new Swiper('.slider-swiper', {
       touchRatio: 1,
       pagination: {
         el: '.swiper-pagination',
+        type: 'bullets',
         clickable: true,
         renderBullet: function (index, className) {
-          return `<span class="${className}">${index + 1}</span>`;
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
         }
       }
     },
@@ -145,9 +146,10 @@ new Swiper('.slider-swiper', {
       touchRatio: 0,
       pagination: {
         el: '.swiper-pagination',
+        type: 'bullets',
         clickable: true,
         renderBullet: function (index, className) {
-          return `<span class="${className}">${index + 1}</span>`;
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
         }
       }
     }

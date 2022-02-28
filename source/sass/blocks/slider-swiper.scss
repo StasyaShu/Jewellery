@@ -1,12 +1,12 @@
-.slider-swiper {
-  padding: 30px 0 70px 0;
-}
-
 .slider-swiper__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 0 60px 0;
+
+  @include mobile {
+    justify-content: center;
+  }
 }
 
 .slider-swiper__title {
@@ -62,7 +62,7 @@
   }
 }
 
-.slider-swiper__slide:nth-child(3n) + div {
+.slider-swiper__slide:nth-child(3n)+div {
   @include tablet {
     display: none;
   }
@@ -70,6 +70,16 @@
 
 .slider-swiper__content img {
   max-width: 100%;
+
+  @include tablet {
+    width: 324px;
+    height: 340px;
+  }
+
+  @include mobile {
+    width: 130px;
+    height: 136px;
+  }
 }
 
 .slider-swiper__content figure {
@@ -87,6 +97,10 @@
   text-align: center;
 
   @include poppins-medium;
+
+  @include mobile {
+    max-width: 125px;
+  }
 }
 
 .slider-swiper__content b {
@@ -102,45 +116,52 @@
 
 .slider-swiper__button-prev-slide {
   cursor: pointer;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .slider-swiper__button-next-slide {
   cursor: pointer;
-}
 
-.swiper-pagination-fraction {
-  font-size: 16px;
-  line-height: 20.8px;
-  font-weight: 500;
-}
-
-.swiper-pagination-fraction ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
   @include mobile {
-    gap: 10px;
+    display: none;
   }
 }
 
-.swiper-pagination {
-  color:  black;
+// Пагинация
+
+.slider-swiper .swiper-pagination {
+  color: $dark;
+  bottom: 0;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+
+  @include poppins-medium;
 }
 
-.swiper-pagination-bullet {
+.slider-swiper .swiper-pagination-bullet {
   width: 14px;
   height: 21px;
-  font-family: inherit;
   font-size: 16px;
-  line-height: 20.8px;
-  font-weight: 500;
-  color: #9B9997;
-  opacity: 100%;
+  line-height: 21 / 16 *100%;
+  color: $pale-text;
   border-radius: none;
   background: transparent;
 
+  @include poppins-medium;
 }
-.swiper-pagination-bullet-active {
-  color: #1D1613;
+
+.slider-swiper .swiper-pagination-bullet-active {
+  color: $dark;
+}
+
+.slider-swiper .swiper-pagination-fraction {
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  color: $dark;
+
+  @include poppins-medium;
 }
