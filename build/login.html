@@ -27,11 +27,14 @@
           </svg>
         </a>
       </div>
-      <button class="page-login__close-button">
-        <svg width="14" height="14" viewBox="0 0 14 14">
-          <use xlink:href="img/sprite.svg#icon-close-login"></use>
-        </svg>
-      </button>
+      <div class="page-login__close-button">
+        <a href="main.html" class="page-login__close-button">
+          <p>Main page</p>
+          <svg width="30" height="11" viewBox="0 0 30 11">
+            <use xlink:href="img/sprite.svg#icon-forward-desktop"></use>
+          </svg>
+        </a>
+      </div>
       <div class="page-login__form">
         <h2>Log In</h2>
         <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
@@ -41,7 +44,8 @@
               <label class="visually-hidden" for="email">Ваш логин-электронный адрес</label>
             </li>
             <li>
-              <input type="password" placeholder="Password" name="password" id="password" min="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+              <input type="password" placeholder="Password" name="password" id="password" min="8"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
               <label class="visually-hidden" for="password">Ваш пароль</label>
               <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
             </li>

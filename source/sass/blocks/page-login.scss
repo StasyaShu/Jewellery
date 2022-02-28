@@ -71,23 +71,41 @@
 .page-login__close-button {
   position: absolute;
   cursor: pointer;
+  display: block;
   top: 20px;
-  right: 20px;
+  right: 10px;
   border: none;
-  background: transparent;
-  width: 14px;
-  height: 14px;
+}
+
+.page-login__close-button p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 21 / 16 *100%;
+  width: 106px;
+  color: $dark;
+
+  @include poppins-medium;
 }
 
 .page-login__close-button svg {
-  fill: $dark;
+  stroke: $dark;
 }
 
 .page-login__close-button:hover svg {
-  fill: $white;
+  stroke: $white;
 }
 
 .page-login__close-button:active svg {
+  opacity: 0.3;
+}
+
+.page-login__close-button:hover p {
+  color: $white;
+}
+
+.page-login__close-button:active p {
   opacity: 0.3;
 }
 
