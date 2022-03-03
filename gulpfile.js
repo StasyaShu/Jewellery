@@ -47,7 +47,6 @@ const scripts = () => gulp.src('source/js/**/*.js')
   .pipe(babel({
     presets: ['@babel/preset-env']
   }))
-  .pipe(minify())
   .pipe(gulp.dest('build/js'));
 
 exports.scripts = scripts;
