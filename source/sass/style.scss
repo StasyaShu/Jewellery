@@ -8,7 +8,6 @@
 // Blocks - Landing page
 
 @import "blocks/landing-header.scss";
-@import "blocks/landing-body.scss";
 
 // Common
 
@@ -21,17 +20,17 @@
 // Blocks - Main page
 @import "blocks/page-main.scss";
 @import "blocks/promo-main.scss";
-@import "blocks/slider-main.scss";
 @import "blocks/blog-main.scss";
 @import "blocks/blog-card.scss";
 @import "blocks/questions.scss";
 @import "blocks/follow-us.scss";
+@import "blocks/slider-main.scss";
 @import "blocks/slider-swiper.scss";
 @import "blocks/popup-login.scss";
 
 // Blocks - Catalog page
 
-@import "blocks/page-catalog";
+@import "blocks/page-catalog.scss";
 @import "blocks/promo-catalog.scss";
 @import "blocks/goods.scss";
 @import "blocks/button-action.scss";

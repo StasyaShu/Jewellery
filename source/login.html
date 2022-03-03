@@ -16,16 +16,22 @@
   <title>HTML Academy: Проект Акселератора Jewellery</title>
 </head>
 
-<body class="page__body login-body">
+<body class="page__body">
   <main class="page-login">
     <h1 class="visually-hidden">Страница формы входа в личный кабинет</h1>
+    <picture>
+      <source type="image/webp" media="(max-width: 767.99px)"
+        srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
+      <source type="image/webp" media="(max-width: 1023.99px)"
+        srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
+      <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" height="138"
+        alt="Фоновое изображение украшений из золота и жемчуга">
+    </picture>
     <div class="page-login__wrapper">
       <div class="page-login__logo">
-        <a href="main.html" aria-label="Логотип-ссылка переход на главную страницу">
-          <svg width="66" height="66" viewBox="0 0 66 66">
-            <use xlink:href="img/sprite.svg#icon-logo"></use>
-          </svg>
-        </a>
+        <svg width="66" height="66" viewBox="0 0 66 66">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
       </div>
       <div class="page-login__close-button">
         <a href="main.html" class="page-login__close-button">
@@ -44,7 +50,8 @@
               <label class="visually-hidden" for="email">Ваш логин-электронный адрес</label>
             </li>
             <li>
-              <input type="password" placeholder="Password" name="password" id="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+              <input type="password" placeholder="Password" name="password" id="password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
               <label class="visually-hidden" for="password">Ваш пароль</label>
               <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
             </li>
