@@ -7,6 +7,7 @@ const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -16,7 +17,7 @@ const browserSync = require('browser-sync');
 
 // Styles
 
-const styles = () => gulp.src('source/sass/style.scss')
+const styles = () => gulp.src(['source/sass/style.scss', 'node_modules/swiper/swiper-bundle.css'])
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass())
@@ -24,7 +25,7 @@ const styles = () => gulp.src('source/sass/style.scss')
     autoprefixer(),
     csso(),
   ]))
-  .pipe(rename('style.min.css'))
+  .pipe(concat('style.min.css'))
   .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.stream());
@@ -46,14 +47,21 @@ const scripts = () => gulp.src('source/js/**/*.js')
   .pipe(babel({
     presets: ['@babel/preset-env']
   }))
-  .pipe(gulp.dest('build/js'));
+  .pipe(gulp.dest('build/js'))
+  .pipe(browserSync.stream());
 
 exports.scripts = scripts;
 
 // To vendor.js
 
-const vendorJS = () => gulp.src('node_modules/swiper/swiper-bundle.min.js')
-.pipe(gulp.dest('build/js/vendor.js'));
+const vendorJS = () => gulp.src('node_modules/swiper/swiper-bundle.js')
+  .pipe(buffer())
+  .pipe(babel({
+    presets: ['@babel/preset-env']
+  }))
+  .pipe(concat('vendor.js'))
+  .pipe(gulp.dest('build/js'))
+  .pipe(browserSync.stream());
 
 exports.vendorJS = vendorJS;
 
