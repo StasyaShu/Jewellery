@@ -98,13 +98,13 @@
   }
 }
 
-.follow-us__wrapper li:nth-child(0n+2) {
+.follow-us__wrapper li:first-child + li {
   @include mobile {
     display: none;
   }
 }
 
-.follow-us__wrapper li:nth-child(0n+2)+li {
+.follow-us__wrapper li:nth-child(5n-2) {
   @include mobile {
     display: none;
   }
