@@ -68,7 +68,7 @@
 
 .blog-main__header p {
   font-size: 34px;
-  line-height: 44 / 34 *100%;
+  line-height: calc(44px / 34px * 100%);
   color: $dark;
   margin: 0 0 35px 0;
   padding: 0;
@@ -78,7 +78,7 @@
 
 .blog-main__header a {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   color: $dark;
   display: block;
   position: relative;
@@ -205,7 +205,7 @@
 
 .blog-main__content a {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   color: $dark;
   display: block;
   position: relative;
@@ -229,7 +229,7 @@
   margin: 0 0 25px 0;
   padding: 0;
   font-size: 14px;
-  line-height: 18 / 14 *100%;
+  line-height: calc(18px / 14px * 100%);
   color: $pale-text;
 
   @include poppins-medium;
@@ -237,7 +237,7 @@
 
 .blog-main__content b {
   font-size: 26px;
-  line-height: 34 / 26 *100%;
+  line-height: calc(34px / 26px * 100%);
   color: $black;
   display: block;
   margin: 0 0 50px 0;

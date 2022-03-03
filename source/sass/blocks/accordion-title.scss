@@ -1,6 +1,6 @@
 .accordion-title {
   font-size: 18px;
-  line-height: 23 / 18 *100%;
+  line-height: calc(23px / 18px * 100%);
   color: $dark;
   display: block;
   margin: 0 0 20px 0;
@@ -46,7 +46,7 @@
 
 .accordion-title--select {
   font-size: 18px;
-  line-height: 23 / 18 *100%;
+  line-height: calc(23px / 18px * 100%);
   color: $dark;
   display: block;
   margin: 0 0 20px 0;

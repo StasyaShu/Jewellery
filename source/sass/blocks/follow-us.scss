@@ -28,7 +28,7 @@
 
 .follow-us__wrapper span:first-of-type {
   font-size: 42px;
-  line-height: 55 / 42 *100%;
+  line-height: calc(55px / 42px * 100%);
   color: $dark;
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@
 
 .follow-us__wrapper span:last-of-type {
   font-size: 34px;
-  line-height: 44 / 34 *100%;
+  line-height: calc(44px / 34px * 100%);
   color: $dark;
   margin: 0 0 35px 0;
   padding: 0;
@@ -48,7 +48,7 @@
 
 .follow-us__wrapper a {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   color: $dark;
   display: block;
   position: relative;

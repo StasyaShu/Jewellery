@@ -41,7 +41,7 @@
   margin: 0;
   padding: 0;
   font-size: 34px;
-  line-height: 44 / 34 *100%;
+  line-height: calc(44px / 34px * 100%);
   text-align: center;
   color: $white;
   text-transform: uppercase;
@@ -54,7 +54,7 @@
   margin: 0;
   padding: 0;
   font-size: 22px;
-  line-height: 29 / 22 *100%;
+  line-height: calc(29px / 22px * 100%);
   text-align: center;
   color: $white;
 

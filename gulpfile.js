@@ -7,7 +7,6 @@ const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
-const minify = require('gulp-minify');
 const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');

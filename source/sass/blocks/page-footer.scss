@@ -39,7 +39,7 @@
 
 .page-footer__signin h2 {
   font-size: 34px;
-  line-height: 44 / 34 *100%;
+  line-height: calc(44px / 34px * 100%);
   letter-spacing: 0.03em;
   color: $white;
   margin: 0 0 15px 0;
@@ -50,7 +50,7 @@
 
 .page-footer__signin p {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   color: $pale-text;
   margin: 0 0 52px 0;
   padding: 0;
@@ -69,7 +69,7 @@
   background: transparent;
   color: $pink;
   font-size: 14px;
-  line-height: 21 / 14 * 100%;
+  line-height: calc(21px / 14px * 100%);
   width: 290px;
 
   @include poppins-medium;
@@ -87,7 +87,7 @@
 
 .page-footer__signin-input a {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   width: 106px;
 
   @include poppins-medium;
@@ -133,7 +133,7 @@
 
 .page-footer__services-list a {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
 
   @include poppins-medium;
 }
@@ -177,7 +177,7 @@
 .page-footer__social a {
   display: block;
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   display: flex;
 
   @include poppins-medium;

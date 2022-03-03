@@ -83,7 +83,7 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   width: 106px;
   color: $dark;
 
@@ -126,7 +126,7 @@
   margin: 0 0 25px 0;
   padding: 0;
   font-size: 34px;
-  line-height: 44 / 34 *100%;
+  line-height: calc(44px / 34px * 100%);
   color: $dark;
   text-align: center;
 
@@ -223,4 +223,3 @@
 .page-login__sign-up a:active {
   box-shadow: 0 0 3px 3px $dark;
 }
-

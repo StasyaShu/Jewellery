@@ -15,7 +15,7 @@
 
 .questions__wrapper h2 {
   font-size: 34px;
-  line-height: 44 / 34 *100%;
+  line-height: calc(44px / 34px * 100%);
   color: $dark;
   margin: 0 0 60px 0;
   padding: 0;
@@ -66,7 +66,7 @@
 
 .questions__text p {
   font-size: 16px;
-  line-height: 21 / 16 *100%;
+  line-height: calc(21px / 16px * 100%);
   color: $dark;
   display: block;
   margin: 0;

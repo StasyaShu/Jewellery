@@ -141,7 +141,7 @@
 .page-header__search input::placeholder {
   color: $pale-text;
   font-size: 14px;
-  line-height: 21 / 14 * 100%;
+  line-height: calc(21px / 14px * 100%);
 
   @include tablet {
     color: transparent;
@@ -152,7 +152,7 @@
 
 .page-header__links a {
   font-size: 14px;
-  line-height: 21 / 14 * 100%;
+  line-height: calc(21px / 14px * 100%);
   color: $dark;
 }
 
@@ -269,7 +269,7 @@
 
 .page-header__goods-list a {
   font-size: 16px;
-  line-height: 24 / 16 *100%;
+  line-height: calc(24px / 16px * 100%);
   color: $dark;
 
   @include tablet {
@@ -306,7 +306,7 @@
 .page-header__data-list a {
   @include tablet {
     font-size: 18px;
-    line-height: 23 / 18 *100%;
+    line-height: calc(23px / 18px * 100%);
     color: $white-pale-75;
   }
 }
@@ -317,7 +317,7 @@
   @include tablet {
     display: block;
     font-size: 18px;
-    line-height: 23 / 18 *100%;
+    line-height: calc(23px / 18px * 100%);
     color: $white;
   }
 }
