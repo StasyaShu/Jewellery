@@ -50,6 +50,13 @@ const scripts = () => gulp.src('source/js/**/*.js')
 
 exports.scripts = scripts;
 
+// To vendor.js
+
+const vendorJS = () => gulp.src('node_modules/swiper/swiper-bundle.min.js')
+.pipe(gulp.dest('build/js/vendor.js'));
+
+exports.vendorJS = vendorJS;
+
 // Images
 
 const images = () => gulp.src('source/img/**/*.{png,jpg,svg}')
@@ -145,7 +152,7 @@ exports.reload = reload;
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.{scss, sass}', gulp.series(styles, reload));
-  gulp.watch('source/js/*.js', gulp.series(scripts, reload));
+  gulp.watch('source/js/*.js', gulp.series(scripts, vendorJS, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));
 };
 
@@ -161,6 +168,7 @@ exports.build = gulp.series(
     styles,
     html,
     scripts,
+    vendorJS,
     sprite,
     createWebp,
   ),
@@ -178,6 +186,7 @@ exports.default = gulp.series(
     sprite,
     createWebp,
     scripts,
+    vendorJS,
   ),
   gulp.series(
     server,
