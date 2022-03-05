@@ -70,6 +70,7 @@
 
 .slider-swiper__content img {
   max-width: 100%;
+  object-fit: cover;
 
   @include tablet {
     width: 324px;
@@ -138,8 +139,17 @@
   font-size: 16px;
   line-height: calc(21px / 16px * 100%);
   color: $dark;
+  text-align: center;
 
   @include poppins-medium;
+}
+
+.slider-swiper .swiper-pagination span {
+  margin: 0 0 0 15px;
+
+  @include mobile {
+    margin: 0;
+  }
 }
 
 .slider-swiper .swiper-pagination-bullet {

@@ -17,7 +17,7 @@ const browserSync = require('browser-sync');
 
 // Styles
 
-const styles = () => gulp.src(['source/sass/style.scss', 'node_modules/swiper/swiper-bundle.css'])
+const styles = () => gulp.src('source/sass/style.scss')
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass())
@@ -25,7 +25,7 @@ const styles = () => gulp.src(['source/sass/style.scss', 'node_modules/swiper/sw
     autoprefixer(),
     csso(),
   ]))
-  .pipe(concat('style.min.css'))
+  .pipe(rename('style.min.css'))
   .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.stream());
