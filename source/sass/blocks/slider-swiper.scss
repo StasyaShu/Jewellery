@@ -90,10 +90,10 @@
 
 .slider-swiper__content figcaption {
   display: block;
-  margin: 25px 0 15px 0;
+  margin: 20px 0 9px 0;
   padding: 0;
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $dark;
   text-align: center;
 
@@ -108,8 +108,8 @@
   display: block;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  font-size: 14px;
+  line-height: 18px;
   color: $dark;
 
   @include poppins-bold;
@@ -135,7 +135,9 @@
 
 .slider-swiper .swiper-pagination {
   color: $dark;
+  position: absolute;
   bottom: 0;
+  left: 48%;
   font-size: 16px;
   line-height: calc(21px / 16px * 100%);
   color: $dark;
@@ -144,8 +146,8 @@
   @include poppins-medium;
 }
 
-.slider-swiper .swiper-pagination span {
-  margin: 0 0 0 15px;
+.slider-swiper .swiper-pagination span:not(:first-child) {
+  margin: 0 0 0 13px;
 
   @include mobile {
     margin: 0;

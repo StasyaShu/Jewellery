@@ -3,11 +3,11 @@
   line-height: calc(23px / 18px * 100%);
   color: $dark;
   display: block;
-  margin: 0 0 20px 0;
+  width: 100%;
+  margin: 0 0 9px 0;
   padding: 0;
   cursor: pointer;
   position: relative;
-  width: 70%;
 
   @include poppins-medium;
 
@@ -21,53 +21,8 @@
   content: "";
   display: block;
   position: absolute;
-  right: -43%;
-  top: 5px;
-  width: 17px;
-  height: 10px;
-  background-image: url("../img/icon-filter-up-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  @include tablet {
-    width: 25px;
-    height: 14px;
-    background-image: url("../img/icon-filter-up-tablet.svg");
-  }
-
-  @include mobile {
-    width: 22x;
-    height: 12px;
-    background-image: url("../img/icon-filter-up-mobile.svg");
-  }
-}
-
-// Открытый аккордеон
-
-.accordion-title--select {
-  font-size: 18px;
-  line-height: calc(23px / 18px * 100%);
-  color: $dark;
-  display: block;
-  margin: 0 0 20px 0;
-  padding: 0;
-  cursor: pointer;
-  position: relative;
-
-  @include poppins-medium;
-
-  @include mobile {
-    font-size: 16px;
-    line-height: 22px;
-  }
-}
-
-.accordion-title--select::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: -43%;
-  top: 3px;
+  right: 5px;
+  top: 6px;
   width: 17px;
   height: 10px;
   background-image: url("../img/icon-filter-down-desktop.svg");
@@ -84,5 +39,51 @@
     width: 22x;
     height: 12px;
     background-image: url("../img/icon-filter-down-mobile.svg");
+  }
+}
+
+// Открытый аккордеон
+
+.accordion-title--select {
+  font-size: 18px;
+  line-height: calc(23px / 18px * 100%);
+  color: $dark;
+  display: block;
+  width: 100%;
+  margin: 0 0 9px 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+
+  @include poppins-medium;
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.accordion-title--select::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  width: 17px;
+  height: 10px;
+  background-image: url("../img/icon-filter-up-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @include tablet {
+    width: 25px;
+    height: 14px;
+    background-image: url("../img/icon-filter-up-tablet.svg");
+  }
+
+  @include mobile {
+    width: 22x;
+    height: 12px;
+    background-image: url("../img/icon-filter-up-mobile.svg");
   }
 }

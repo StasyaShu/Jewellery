@@ -24,11 +24,13 @@
 .follow-us__wrapper h2 {
   text-align: center;
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .follow-us__wrapper span:first-of-type {
   font-size: 42px;
-  line-height: calc(55px / 42px * 100%);
+  line-height: 55px;
   color: $dark;
   margin: 0;
   padding: 0;
@@ -38,9 +40,9 @@
 
 .follow-us__wrapper span:last-of-type {
   font-size: 34px;
-  line-height: calc(44px / 34px * 100%);
+  line-height: 44px;
   color: $dark;
-  margin: 0 0 35px 0;
+  margin: 0 0 25px 0;
   padding: 0;
 
   @include cormorant-bold;
