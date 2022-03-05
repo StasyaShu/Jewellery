@@ -23,6 +23,10 @@
   padding: 0;
 }
 
+.landing-header__navigation li {
+  cursor: pointer;
+}
+
 .landing-header__navigation li::marker {
   font-size: 24px;
   line-height: calc(36px / 24px * 100%);
@@ -39,6 +43,12 @@
   @include poppins-medium;
 }
 
-.landing-header__navigation a:hover {
+.landing-header__navigation li:hover {
+  a {
+    color: $white;
+  }
+}
+
+.landing-header__navigation li:hover::marker {
   color: $white;
 }

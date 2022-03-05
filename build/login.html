@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тренировочный проект от HTML Academy: Jewellery. Выполнила студент Шулепова С.В.">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/cormorant-garamond-medium-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <title>HTML Academy: Проект Акселератора Jewellery</title>
+</head>
+
+<body class="page__body">
+  <main class="page-login">
+    <h1 class="visually-hidden">Страница формы входа в личный кабинет</h1>
+    <picture>
+      <source type="image/webp" media="(max-width: 767.99px)"
+        srcset="img/login-mobile@1x.webp 1x, img/login-mobile@2x.webp 2x">
+      <source type="image/webp" media="(max-width: 1023.99px)"
+        srcset="img/login-tablet@1x.webp 1x, img/login-tablet@2x.webp 2x">
+      <img src="img/login-desktop@1x.jpg" srcset="img/login-desktop@2x.jpg 2x" height="138"
+        alt="Фоновое изображение украшений из золота и жемчуга">
+    </picture>
+    <div class="page-login__wrapper">
+      <div class="page-login__logo">
+        <svg width="66" height="66" viewBox="0 0 66 66">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </div>
+      <div class="page-login__close-button">
+        <a href="main.html" class="page-login__close-button">
+          <p>Main page</p>
+          <svg width="30" height="11" viewBox="0 0 30 11">
+            <use xlink:href="img/sprite.svg#icon-forward-desktop"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="page-login__form">
+        <h2>Log In</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
+          <ul>
+            <li>
+              <input type="email" placeholder="Your E-mail" name="email" id="email" required>
+              <label class="visually-hidden" for="email">Ваш логин-электронный адрес</label>
+            </li>
+            <li>
+              <input type="password" placeholder="Password" name="password" id="password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+              <label class="visually-hidden" for="password">Ваш пароль</label>
+              <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
+            </li>
+          </ul>
+          <button type="submit" class="button-action">Log In</button>
+          <div class="page-login__sign-up">
+            <p>Don’t have an account?</p>
+            <a href="" aria-label="Нажмите, чтобы зарегистрироваться">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="overlay"></div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
