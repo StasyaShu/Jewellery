@@ -1,10 +1,18 @@
 // Основные
 
 .goods__wrapper {
-  padding: 80px 7%;
+  padding: 80px 7% 76px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include tablet {
+    padding: 52px 6% 71px;
+  }
+
+  @include mobile {
+    padding: 52px 6% 68px;
+  }
 }
 
 // Кнопка фильтра
@@ -23,7 +31,7 @@
 .goods__wrapper form {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 22%;
 
   @include tablet {
     display: none;
@@ -32,7 +40,7 @@
 
 .goods__accordion {
   border: 1px solid $brown-main;
-  margin: 0 0 35px 0;
+  margin: 0 0 26px;
 
   @include tablet {
     display: none;
@@ -41,7 +49,7 @@
 
 .goods__tab {
   position: relative;
-  padding: 50px 38px 30px;
+  padding: 23px 26px 22px;
 
   @include mobile {
     padding: 50px 18px 30px;
@@ -83,7 +91,7 @@
   @include poppins-medium;
 }
 
-.goods__tab-content input + label::before {
+.goods__tab-content input+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -94,11 +102,11 @@
   background-color: transparent;
 }
 
-.goods__tab-content input:hover + label::before {
+.goods__tab-content input:hover+label::before {
   background-color: $brown-main;
 }
 
-.goods__tab-content input:checked + label::before {
+.goods__tab-content input:checked+label::before {
   background-color: $brown-main;
 }
 
@@ -107,7 +115,7 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 10px;
 }
 
 .goods__tab-content li {
@@ -116,7 +124,7 @@
 }
 
 .goods__tab-content li:not(:last-child) {
-  margin: 0 0 25px 0;
+  margin: 0 0 13px;
 }
 
 .goods__range-controls {
@@ -125,7 +133,7 @@
 
 .goods__button-apply {
   width: 100%;
-  margin: 0 0 25px 0;
+  margin: 0 0 19px 0;
 }
 
 .goods__button-clear {
@@ -135,7 +143,15 @@
 // Список товаров
 
 .goods__list {
-  width: 73%;
+  width: 75%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.goods__catalog {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,35 +160,41 @@
     width: 100%;
     padding: 50px 0 0 0;
   }
+
+  @include mobile {
+    padding: 41px 0 0;
+  }
 }
 
-.goods__list ul {
+.goods__catalog ul {
   width: 100%;
   list-style: none;
-  margin: 0 0 40px 0;
+  margin: 0 0 70px 0;
   padding: 0;
   display: grid;
   grid-template-columns: 0.8fr 0.8fr 0.8fr;
-  gap: 25px;
+  gap: 36px;
   justify-items: center;
 
   @include mobile {
     grid-template-columns: 0.8fr 0.8fr;
+    margin: 0 0 40px 0;
+    gap: 25px;
   }
 }
 
-.goods__list li {
+.goods__catalog li {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.goods__list figure {
+.goods__catalog figure {
   margin: 0;
   padding: 0;
 }
 
-.goods__list img {
+.goods__catalog img {
   object-fit: cover;
 
   @include tablet {
@@ -185,9 +207,10 @@
   }
 }
 
-.goods__list figcaption {
+.goods__catalog figcaption {
   display: block;
-  margin: 25px 0 15px 0;
+  margin: 16px 0 8px;
+  transform: translate(4px, 0px);
   padding: 0;
   font-size: 16px;
   line-height: 21px;
@@ -195,9 +218,14 @@
   text-align: center;
 
   @include poppins-medium;
+
+  @include mobile {
+    margin: 12px 0 7px;
+    transform: translate(0, 0);
+  }
 }
 
-.goods__list b {
+.goods__catalog b {
   display: block;
   margin: 0;
   padding: 0;
@@ -226,11 +254,17 @@
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 0;
   width: auto;
+  transform: translate(-22px, 1px);
+
+  @include mobile {
+    transform: translate(-13px, 2px);
+  }
 }
 
 .goods__pagination li {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 13px;
   font-size: 16px;
   line-height: 21px;
   color: $pale-text;
@@ -239,7 +273,7 @@
   @include poppins-medium;
 
   @include mobile {
-    margin: 0 0 0 25px;
+    margin: 0 0 0 24px;
   }
 }
 

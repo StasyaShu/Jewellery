@@ -12,8 +12,8 @@
 .range__bar {
   position: absolute;
   top: 0;
-  left: 37px;
-  width: 64%;
+  left: 48px;
+  width: 56%;
   height: 1px;
   background-color: $brown-main;
 }
@@ -42,11 +42,11 @@
 }
 
 .range__toggle--min {
-  left: 31px;
+  left: 46px;
   top: -7px;
 }
 
 .range__toggle--max {
-  left: 76%;
+  left: 74%;
   top: -7px;
 }

@@ -32,7 +32,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 102px 0 0 0;
+  padding: 91px 0 0;
+
+  @include tablet {
+    padding: 94px 0 0;
+  }
 }
 
 

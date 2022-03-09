@@ -98,7 +98,40 @@ const handleAccordion = (() => {
   };
 })();
 
-handleAccordion.manageAccordion(); // Слайдер Swiper
+handleAccordion.manageAccordion(); // Аккордеон на странице каталога
+
+const handleFilter = (() => {
+  const accordion = document.getElementById('filter');
+
+  const showText = textEl => {
+    textEl.style.height = textEl.scrollHeight + 'px';
+  };
+
+  const hideText = textItem => {
+    textItem.style.height = '0';
+  };
+
+  return {
+    manageFilter: () => {
+      if (accordion) {
+        accordion.addEventListener('click', evt => {
+          const targ = evt.target;
+          if (targ.tagName !== 'H3') return;
+
+          if (!targ.classList.contains('filter-title--select')) {
+            targ.classList.add('filter-title--select');
+            showText(targ.nextElementSibling);
+          } else {
+            targ.classList.remove('filter-title--select');
+            hideText(targ.nextElementSibling);
+          }
+        });
+      }
+    }
+  };
+})();
+
+handleFilter.manageFilter(); // Слайдер Swiper
 
 new Swiper('.slider-swiper', {
   navigation: {
