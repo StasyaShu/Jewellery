@@ -17,7 +17,7 @@
 
 .slider-swiper__title p {
   font-size: 34px;
-  line-height: calc(44px / 34px * 100%);
+  line-height: 44px;
   color: $dark;
   margin: 0 0 20px 0;
   padding: 0;
@@ -28,7 +28,7 @@
 
 .slider-swiper__title a {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $dark;
   display: block;
   position: relative;
@@ -62,7 +62,7 @@
   }
 }
 
-.slider-swiper__slide:nth-child(3n)+div {
+.slider-swiper__slide:nth-child(3n) + div {
   @include tablet {
     display: none;
   }
@@ -134,12 +134,11 @@
 // Пагинация
 
 .slider-swiper .swiper-pagination {
-  color: $dark;
   position: absolute;
   bottom: 0;
   left: 48%;
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $dark;
   text-align: center;
 
@@ -158,7 +157,7 @@
   width: 14px;
   height: 21px;
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $pale-text;
   border-radius: none;
   background: transparent;
@@ -172,7 +171,7 @@
 
 .slider-swiper .swiper-pagination-fraction {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $dark;
 
   @include poppins-medium;

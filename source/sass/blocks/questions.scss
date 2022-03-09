@@ -15,7 +15,7 @@
 
 .questions__wrapper h2 {
   font-size: 34px;
-  line-height: calc(44px / 34px * 100%);
+  line-height: 44px;
   letter-spacing: 0.03em;
   color: $dark;
   margin: 0 0 47px 0;
@@ -41,7 +41,7 @@
 .questions__tab {
   position: relative;
   padding: 50px 50px 33px;
-  transform: translate(0px, -5px);
+  transform: translate(0, -5px);
 
   @include mobile {
     padding: 50px 18px 30px;
@@ -68,7 +68,7 @@
 
 .questions__text p {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $dark;
   display: block;
   margin: 0;
@@ -78,5 +78,6 @@
 
   @include mobile {
     font-size: 14px;
+    line-height: 20px;
   }
 }

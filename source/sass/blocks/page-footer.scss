@@ -30,7 +30,6 @@
 // Блок подписки на новости
 
 .page-footer__signin {
-
   @include tablet {
     width: 100%;
     margin: 0 0 50px 0;
@@ -39,7 +38,7 @@
 
 .page-footer__signin h2 {
   font-size: 34px;
-  line-height: calc(44px / 34px * 100%);
+  line-height: 44px;
   letter-spacing: 0.03em;
   color: $white;
   margin: 0 0 15px 0;
@@ -50,7 +49,7 @@
 
 .page-footer__signin p {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   color: $pale-text;
   margin: 0 0 52px 0;
   padding: 0;
@@ -69,7 +68,7 @@
   background: transparent;
   color: $pink;
   font-size: 14px;
-  line-height: calc(21px / 14px * 100%);
+  line-height: 21px;
   width: 290px;
 
   @include poppins-medium;
@@ -87,7 +86,7 @@
 
 .page-footer__signin-input a {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   width: 106px;
 
   @include poppins-medium;
@@ -133,7 +132,7 @@
 
 .page-footer__services-list a {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
 
   @include poppins-medium;
 }
@@ -143,14 +142,12 @@
 }
 
 .page-footer__services-list li {
-
   @include mobile {
     margin: 0 0 30px 0;
   }
 }
 
 .page-footer__services-list li:nth-child(4n+4) {
-
   @include mobile {
     margin: 0 0 50px 0;
   }
@@ -175,9 +172,8 @@
 }
 
 .page-footer__social a {
-  display: block;
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
   display: flex;
 
   @include poppins-medium;

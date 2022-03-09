@@ -12,7 +12,7 @@
 
 .landing-header__wrapper h1 {
   font-size: 32px;
-  line-height: calc(44px / 32px * 100%);
+  line-height: 44px;
   color: $dark;
 
   @include poppins-bold;
@@ -29,7 +29,7 @@
 
 .landing-header__navigation li::marker {
   font-size: 24px;
-  line-height: calc(36px / 24px * 100%);
+  line-height: 36px;
   color: $dark;
 
   @include poppins-medium;
@@ -37,7 +37,7 @@
 
 .landing-header__navigation a {
   font-size: 24px;
-  line-height: calc(36px / 24px * 100%);
+  line-height: 36px;
   color: $dark;
 
   @include poppins-medium;

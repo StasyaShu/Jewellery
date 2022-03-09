@@ -1,5 +1,6 @@
 .page-header {
   width: 100%;
+
   @include poppins-medium;
   position: fixed;
   z-index: 2;
@@ -144,6 +145,7 @@
   color: $pale-text;
   font-size: 14px;
   line-height: 21px;
+
   @include poppins-medium;
 
   @include tablet {
@@ -159,7 +161,7 @@
 
 .page-header__links a {
   font-size: 14px;
-  line-height: calc(21px / 14px * 100%);
+  line-height: 21px;
   color: $dark;
 }
 
@@ -277,11 +279,12 @@
 
 .page-header__goods-list a {
   font-size: 16px;
-  line-height: calc(24px / 16px * 100%);
+  line-height: 24px;
   color: $dark;
 
   @include tablet {
     font-size: 24px;
+    line-height: 36px;
     color: $white;
   }
 }
@@ -314,7 +317,7 @@
 .page-header__data-list a {
   @include tablet {
     font-size: 18px;
-    line-height: calc(23px / 18px * 100%);
+    line-height: 23px;
     color: $white-pale-75;
   }
 }
@@ -325,7 +328,7 @@
   @include tablet {
     display: block;
     font-size: 18px;
-    line-height: calc(23px / 18px * 100%);
+    line-height: 23px;
     color: $white;
   }
 }

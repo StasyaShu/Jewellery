@@ -23,7 +23,7 @@
 
 .filter__title {
   font-size: 16px;
-  line-height: calc(21px / 16px * 100%);
+  line-height: 21px;
 
   @include poppins-medium;
 }
@@ -40,13 +40,13 @@
   position: relative;
   padding: 0 0 0 25px;
   font-size: 14px;
-  line-height: calc(18px / 14px * 100%);
+  line-height: 18px;
   color: $dark;
 
   @include poppins-medium;
 }
 
-.filter__tab-content input+label::before {
+.filter__tab-content input + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -57,11 +57,11 @@
   background-color: transparent;
 }
 
-.filter__tab-content input:hover+label::before {
+.filter__tab-content input:hover + label::before {
   background-color: $brown-main;
 }
 
-.filter__tab-content input:checked+label::before {
+.filter__tab-content input:checked + label::before {
   background-color: $brown-main;
 }
 
