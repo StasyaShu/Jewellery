@@ -1,9 +1,10 @@
 .popup-login {
   display: block;
-  width: 39%;
+  width: 31%;
   position: absolute;
-  top: 120px;
-  left: 33%;
+  top: 100px;
+  left: 34%;
+  transform: translate(4px, 0px);
   z-index: 5;
   background-color: $beige;
 
@@ -41,7 +42,7 @@
 
 .popup-login__wrapper {
   position: relative;
-  padding: 195px 45px 60px;
+  padding: 189px 41px 46px;
 
   @include tablet {
     padding: 195px 25px 60px;
@@ -56,7 +57,7 @@
   position: absolute;
   cursor: pointer;
   top: 20px;
-  right: 20px;
+  right: 22px;
   border: none;
   background: transparent;
   width: 14px;
@@ -82,7 +83,7 @@
 
 .popup-login__form h2 {
   display: block;
-  margin: 0 0 25px 0;
+  margin: 0 0 28px 0;
   padding: 0;
   font-size: 34px;
   line-height: 44px;
@@ -104,14 +105,14 @@
 }
 
 .popup-login__form li {
-  margin: 0 0 35px 0;
+  margin: 0 0 32px 0;
   display: flex;
   flex-direction: column;
 }
 
 .popup-login__form li:last-child a {
   display: block;
-  padding: 9px 0;
+  padding: 5px 0;
   font-size: 12px;
   line-height: 18px;
   color: $pale-text;
@@ -127,7 +128,7 @@
 .popup-login__form input {
   border: none;
   background: transparent;
-  padding: 9px 9px;
+  padding: 9px 3px;
   border-bottom: 1px solid $dark;
 }
 
@@ -182,4 +183,8 @@
 
 .popup-login__sign-up a:active {
   box-shadow: 0 0 3px 3px $dark;
+}
+
+.popup-login__button {
+  transform: translate(1px, 7px);
 }
