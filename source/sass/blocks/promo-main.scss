@@ -13,6 +13,7 @@
 
   @media (max-width: 1023.99px) {
     background-image: url("../img/promo-main-tablet@1x.jpg");
+    height: 470px;
   }
 
   @media (max-width: 1023.99px) and (min-resolution: 2dppx) {
@@ -33,6 +34,16 @@
   flex-direction: column;
   align-items: center;
   padding: 193px 0 0 0;
+
+  @include tablet {
+    padding: 187px 0 0;
+    transform: translate(-8px, 1px);
+  }
+
+  @include mobile {
+    padding: 193px 0 0;
+    transform: translate(0, 0);
+  }
 }
 
 .promo-main__wrapper h2 {
@@ -47,6 +58,11 @@
   text-transform: uppercase;
 
   @include cormorant-bold;
+
+  @include mobile {
+    font-size: 38px;
+    line-height: 49px;
+  }
 }
 
 .promo-main__wrapper p {
@@ -60,4 +76,14 @@
   transform: translate(1px, -3px);
 
   @include cormorant-italic;
+
+  @include tablet {
+    transform: translate(-1px, -6px);
+  }
+
+  @include mobile {
+    font-size: 34px;
+    line-height: 44px;
+    transform: translate(-2px, -8px);
+  }
 }

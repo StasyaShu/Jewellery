@@ -6,6 +6,7 @@
 
   @include mobile {
     justify-content: center;
+    margin: 0 0 43px;
   }
 }
 
@@ -19,7 +20,7 @@
   font-size: 34px;
   line-height: 44px;
   color: $dark;
-  margin: 0 0 20px 0;
+  margin: 0 0 19px 0;
   padding: 0;
   text-align: center;
 
@@ -62,7 +63,7 @@
   }
 }
 
-.slider-swiper__slide:nth-child(3n) + div {
+.slider-swiper__slide:nth-child(3n)+div {
   @include tablet {
     display: none;
   }
@@ -99,6 +100,10 @@
 
   @include poppins-medium;
 
+  @include tablet {
+    margin: 13px 0 7px;
+  }
+
   @include mobile {
     max-width: 125px;
   }
@@ -118,18 +123,43 @@
 .slider-swiper__button-prev-slide {
   cursor: pointer;
 
+  @include tablet {
+    transform: translate(0px, 9px);
+  }
+
   @include mobile {
     display: none;
+  }
+}
+
+.slider-swiper__button-prev-slide svg {
+
+  @include tablet {
+    width: 36px;
+    height: 15px;
   }
 }
 
 .slider-swiper__button-next-slide {
   cursor: pointer;
 
+  @include tablet {
+    transform: translate(0px, 9px);
+  }
+
   @include mobile {
     display: none;
   }
 }
+
+.slider-swiper__button-next-slide svg {
+
+  @include tablet {
+    width: 36px;
+    height: 15px;
+  }
+}
+
 
 // Пагинация
 
@@ -143,6 +173,10 @@
   text-align: center;
 
   @include poppins-medium;
+
+  @include tablet {
+    bottom: 8px;
+  }
 }
 
 .slider-swiper .swiper-pagination span:not(:first-child) {
@@ -150,6 +184,18 @@
 
   @include mobile {
     margin: 0;
+  }
+}
+
+.slider-swiper .swiper-pagination span:first-of-type {
+  @include mobile {
+    margin: 0 6px 0 0;
+  }
+}
+
+.slider-swiper .swiper-pagination span:last-of-type {
+  @include mobile {
+    margin: 0 0 0 6px;
   }
 }
 
@@ -175,4 +221,8 @@
   color: $dark;
 
   @include poppins-medium;
+
+  @include mobile {
+    transform: translate(-20px, 1px);
+  }
 }

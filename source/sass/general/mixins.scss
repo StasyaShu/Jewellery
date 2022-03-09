@@ -55,11 +55,3 @@
     @content;
   }
 }
-
-// Retina
-
-@mixin retina {
-  @media (min-resolution: 2dppx) {
-    @content;
-  }
-}

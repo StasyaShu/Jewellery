@@ -9,7 +9,11 @@
   align-items: center;
 
   @include tablet {
-    padding: 0 5% 80px;
+    padding: 0 6% 66px;
+  }
+
+  @include mobile {
+    padding: 0 6% 47px;
   }
 }
 
@@ -26,8 +30,8 @@
   @include cormorant-bold;
 
   @include mobile {
-    margin: 0 0 40px 0;
-    max-width: 243px;
+    margin: 0 0 30px 0;
+    max-width: 244px;
   }
 }
 
@@ -43,8 +47,13 @@
   padding: 50px 50px 33px;
   transform: translate(0, -5px);
 
+  @include tablet {
+    padding: 44px 48px 44px;
+    transform: translate(0, 0);
+  }
+
   @include mobile {
-    padding: 50px 18px 30px;
+    padding: 15px 15px 24px;
   }
 }
 
@@ -64,6 +73,15 @@
   padding: 0 0 0 8px;
   transition: height 1s;
   width: 59%;
+
+  @include tablet {
+    width: 97%;
+    padding: 0;
+  }
+
+  @include mobile {
+    width: 83%;
+  }
 }
 
 .questions__text p {

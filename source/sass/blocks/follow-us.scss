@@ -5,13 +5,13 @@
 }
 
 .follow-us__wrapper {
-  padding: 0 7% 132px;
+  padding: 0 7% 128px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include tablet {
-    padding: 0 7% 80px;
+    padding: 0 7% 76px;
   }
 
   @include mobile {
@@ -24,8 +24,12 @@
 .follow-us__wrapper h2 {
   text-align: center;
   display: block;
-  margin: 0;
+  margin: 0 0 30px 0;
   padding: 0;
+
+  @include tablet {
+    margin: 0 0 16px;
+  }
 }
 
 .follow-us__wrapper span:first-of-type {
@@ -41,8 +45,9 @@
 .follow-us__wrapper span:last-of-type {
   font-size: 34px;
   line-height: 44px;
+  letter-spacing: 0.03em;
   color: $dark;
-  margin: 0 0 25px 0;
+  margin: 0;
   padding: 0;
 
   @include cormorant-bold;
@@ -55,9 +60,17 @@
   display: block;
   position: relative;
   text-align: center;
-  margin: 0 0 70px 0;
+  margin: 0 0 66px 0;
 
   @include poppins-medium;
+
+  @include tablet {
+    margin: 0 0 64px;
+  }
+
+  @include mobile {
+    margin: 0 0 50px;
+  }
 }
 
 .follow-us__wrapper a::after {
@@ -83,9 +96,14 @@
   gap: 24px;
   justify-content: space-between;
 
+  @include tablet {
+    gap: 10px;
+  }
+
   @include mobile {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
+    gap: 20px;
   }
 }
 

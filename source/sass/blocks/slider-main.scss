@@ -8,14 +8,18 @@
   padding: 122px 7% 115px;
 
   @include tablet {
-    padding: 80px 7%;
+    padding: 69px 6% 57px;
   }
 
   @include mobile {
-    padding: 70px 5%;
+    padding: 60px 5% 47px;
   }
 }
 
 .slider-main__wrapper .slider-swiper {
   padding: 0 0 70px 0;
+
+  @include mobile {
+    padding: 0 0 61px;
+  }
 }

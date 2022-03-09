@@ -24,7 +24,11 @@
 
   @include tablet {
     position: relative;
-    padding: 30px 5% 80px;
+    padding: 28px 6% 80px;
+  }
+
+  @include mobile {
+    padding: 17px 5% 80px;
   }
 }
 
@@ -95,10 +99,23 @@
 .page-header__logo {
   display: block;
   transform: translate(-30px, 10px);
+
+  @include tablet {
+    transform: translate(0, 0);
+  }
+
+  @include mobile {
+    transform: translate(-4px, 2px);
+  }
 }
 
 .page-header__logo svg {
   fill: $brown-main;
+
+  @include mobile {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 // Поле поиска
@@ -157,6 +174,10 @@
 
 .page-header__links {
   transform: translate(-2px, -3px);
+
+  @include tablet {
+    transform: translate(0, 0);
+  }
 }
 
 .page-header__links a {

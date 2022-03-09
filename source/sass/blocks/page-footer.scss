@@ -8,18 +8,18 @@
 }
 
 .page-footer__wrapper {
-  padding: 100px 7%;
+  padding: 85px 7% 95px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @include tablet {
-    padding: 60px 22% 60px 7%;
+    padding: 50px 20% 60px 6%;
   }
 
   @include mobile {
     flex-direction: column;
-    padding: 60px 5%;
+    padding: 51px 5%;
   }
 }
 
@@ -32,7 +32,11 @@
 .page-footer__signin {
   @include tablet {
     width: 100%;
-    margin: 0 0 50px 0;
+    margin: 0 0 42px 0;
+  }
+
+  @include mobile {
+    margin: 0 0 60px 0;
   }
 }
 
@@ -41,26 +45,54 @@
   line-height: 44px;
   letter-spacing: 0.03em;
   color: $white;
-  margin: 0 0 15px 0;
+  margin: 0 0 13px 0;
   padding: 0;
 
   @include cormorant-bold;
+
+  @include tablet {
+    margin: 0 0 12px 0;
+    transform: translate(-4px, 0px);
+  }
+
+  @include mobile {
+    margin: 0 0 13px;
+    transform: translate(-4px, 0px);
+    max-width: 80%;
+  }
 }
 
 .page-footer__signin p {
   font-size: 16px;
   line-height: 21px;
   color: $pale-text;
-  margin: 0 0 52px 0;
-  padding: 0;
+  margin: 0 0 42px 0;
+  padding: 0 0 0 5px;
 
   @include poppins-regular;
+
+  @include tablet {
+    padding: 0;
+  }
+
+  @include mobile {
+    max-width: 80%;
+    margin: 0 0 35px 0;
+  }
 }
 
 .page-footer__signin-input {
   position: relative;
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    transform: translate(-3px, -2px);
+  }
+
+  @include mobile {
+    transform: translate(-3px, 7px);
+  }
 }
 
 .page-footer__signin-input input {
@@ -69,9 +101,13 @@
   color: $pink;
   font-size: 14px;
   line-height: 21px;
-  width: 290px;
+  width: 398px;
 
   @include poppins-medium;
+
+  @include mobile {
+    width: 183px;
+  }
 }
 
 .page-footer__signin-input::after {
@@ -80,7 +116,7 @@
   width: 100%;
   height: 1px;
   background-color: $white;
-  bottom: -15px;
+  bottom: -10px;
   left: 0;
 }
 
@@ -95,6 +131,10 @@
 .page-footer__signin-input svg {
   margin: 0 0 0 12px;
   stroke: $white;
+
+  @include mobile {
+    margin: 0 0 0 5px;
+  }
 }
 
 .page-footer__signin-input a:hover {
@@ -109,17 +149,18 @@
 
 .page-footer__services-list ul {
   list-style: none;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 67px;
   padding: 13px 0 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content min-content;
-  width: 380px;
-  row-gap: 25px;
-  column-gap: 45px;
+  width: 444px;
+  row-gap: 20px;
+  column-gap: 42px;
 
   @include tablet {
     margin: 0;
+    column-gap: 60px;
   }
 
   @include mobile {
@@ -143,13 +184,13 @@
 
 .page-footer__services-list li {
   @include mobile {
-    margin: 0 0 30px 0;
+    margin: 0 0 22px 0;
   }
 }
 
 .page-footer__services-list li:nth-child(4n+4) {
   @include mobile {
-    margin: 0 0 50px 0;
+    margin: 0 0 38px 0;
   }
 }
 
@@ -168,6 +209,8 @@
     flex-direction: row;
     height: auto;
     width: 168px;
+    padding: 5px 0 0;
+    transform: translate(-6px, -1px);
   }
 }
 
