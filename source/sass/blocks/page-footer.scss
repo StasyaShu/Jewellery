@@ -52,12 +52,12 @@
 
   @include tablet {
     margin: 0 0 12px 0;
-    transform: translate(-4px, 0px);
+    transform: translate(-4px, 0);
   }
 
   @include mobile {
     margin: 0 0 13px;
-    transform: translate(-4px, 0px);
+    transform: translate(-4px, 0);
     max-width: 80%;
   }
 }
