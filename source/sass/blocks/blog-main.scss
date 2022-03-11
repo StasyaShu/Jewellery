@@ -1,9 +1,5 @@
 // Основные стили блока
 
-.blog-main {
-  width: 100%;
-}
-
 .blog-main__wrapper {
   padding: 0 7% 119px;
   display: flex;
@@ -29,6 +25,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
+  justify-items: center;
   gap: 30px;
 
   @include tablet {
@@ -41,6 +38,14 @@
   @include mobile {
     align-items: stretch;
     gap: 40px;
+  }
+}
+
+.blog-main__wrapper li {
+  // max-width: 570px;
+
+  @include tablet {
+    width: auto;
   }
 }
 
@@ -119,6 +124,7 @@
 }
 
 .blog-main__care b {
+  display: block;
   max-width: 163px;
 }
 
@@ -162,10 +168,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 300px;
-  padding: 67px 0;
-  width: 285px;
+  align-items: center;
+  flex: 0 0 50%;
 
   @include tablet {
     width: 339px;
@@ -174,7 +178,6 @@
   @include mobile {
     width: 100%;
     align-self: center;
-    height: 256px;
   }
 }
 

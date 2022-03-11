@@ -71,7 +71,7 @@
 
 .slider-swiper__content img {
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
   @include tablet {
     width: 324px;
@@ -162,6 +162,7 @@
 // Пагинация
 
 .slider-swiper .swiper-pagination {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 48%;
