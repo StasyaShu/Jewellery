@@ -25,6 +25,7 @@ const handleMobileMenu = (() => {
 handleMobileMenu.showNav(); // Попап логин
 
 const handleLoginPopup = (() => {
+  const body = document.querySelector('body');
   const loginButton = document.querySelector('.page-header__link--login');
   const loginPopup = document.querySelector('.popup-login');
   const loginPopupCloseButton = document.querySelector('.popup-login__close-button');
@@ -39,17 +40,27 @@ const handleLoginPopup = (() => {
           popupOverlay.classList.add('overlay--active');
           const popupInputEmail = document.getElementById('email-popup');
           popupInputEmail.focus();
+          body.style.overflow = 'hidden';
         });
         document.addEventListener('keydown', evt => {
           if (evt.keyCode === ESC_KEY_CODE) {
             loginPopup.classList.add('popup-login--hide');
             popupOverlay.classList.remove('overlay--active');
+            body.style.overflow = 'scroll';
+          }
+        });
+        document.addEventListener('click', evt => {
+          if (evt.target === popupOverlay) {
+            loginPopup.classList.add('popup-login--hide');
+            popupOverlay.classList.remove('overlay--active');
+            body.style.overflow = 'scroll';
           }
         });
         loginPopupCloseButton.addEventListener('click', evt => {
           evt.preventDefault();
           loginPopup.classList.add('popup-login--hide');
           popupOverlay.classList.remove('overlay--active');
+          body.style.overflow = 'scroll';
         });
       }
     }

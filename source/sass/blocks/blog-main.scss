@@ -11,13 +11,18 @@
   }
 
   @include mobile {
+    align-items: stretch;
     padding: 0 5% 60px;
   }
 }
 
 // Список записей в блоге
 
-.blog-main__wrapper ul {
+.blog-main__list {
+  max-width: 1170px;
+}
+
+.blog-main__list ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,7 +30,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  justify-items: center;
   gap: 30px;
 
   @include tablet {
@@ -41,25 +45,29 @@
   }
 }
 
-.blog-main__wrapper li {
+.blog-main__list li {
   // max-width: 570px;
 
   @include tablet {
     width: auto;
   }
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
-.blog-main__wrapper li:first-of-type {
+.blog-main__list li:first-of-type {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
 }
 
-.blog-main__wrapper li:nth-child(2n+2) {
+.blog-main__list li:nth-child(2n+2) {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 }
 
-.blog-main__wrapper li:nth-child(3n+3) {
+.blog-main__list li:nth-child(3n+3) {
   grid-row: 1 / -1;
   grid-column: 2 / 3;
 }

@@ -1,6 +1,5 @@
 .blog-card {
   background-color: $beige;
-  max-width: 570px;
 
   @include tablet {
     max-width: 678px;

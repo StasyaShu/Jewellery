@@ -5,10 +5,13 @@
   width: 100%;
   z-index: 1;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 
 .page-footer__wrapper {
-  padding: 85px 7% 95px;
+  padding: 85px 20px 95px;
+  max-width: 1210px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -30,6 +33,8 @@
 // Блок подписки на новости
 
 .page-footer__signin {
+  margin: 0 0 20px 0;
+
   @include tablet {
     width: 100%;
     margin: 0 0 42px 0;
@@ -101,12 +106,12 @@
   color: $pink;
   font-size: 14px;
   line-height: 21px;
-  width: 398px;
+  min-width: 398px;
 
   @include poppins-medium;
 
   @include mobile {
-    width: 183px;
+    min-width: 183px;
   }
 }
 
@@ -149,12 +154,11 @@
 
 .page-footer__services-list ul {
   list-style: none;
-  margin: 0 0 0 67px;
+  margin: 0 0 0 20px;
   padding: 13px 0 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content min-content;
-  width: 444px;
   row-gap: 20px;
   column-gap: 42px;
 
@@ -200,7 +204,6 @@
   list-style: none;
   margin: 0;
   padding: 13px 0 0 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -211,6 +214,14 @@
     width: 168px;
     padding: 5px 0 0;
     transform: translate(-6px, -1px);
+  }
+}
+
+.page-footer__social li {
+  margin: 0 0 20px 0;
+
+  @include mobile {
+    margin: 0;
   }
 }
 

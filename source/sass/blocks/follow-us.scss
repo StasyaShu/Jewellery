@@ -85,7 +85,11 @@
 
 // Список картинок
 
-.follow-us__wrapper ul {
+.follow-us__gallery {
+  max-width: 1170px;
+}
+
+.follow-us__gallery ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -93,7 +97,7 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto;
-  gap: 24px;
+  gap: 27px;
   justify-content: space-between;
 
   @include tablet {
@@ -107,30 +111,30 @@
   }
 }
 
-.follow-us__wrapper li img {
-  object-fit: cover;
+.follow-us__gallery li img {
+  object-fit: contain;
 }
 
-.follow-us__wrapper li:nth-child(-n+3) img {
+.follow-us__gallery li:nth-child(-n+3) img {
   @include tablet {
     width: 133px;
     height: 133px;
   }
 }
 
-.follow-us__wrapper li:first-child + li {
+.follow-us__gallery li:first-child + li {
   @include mobile {
     display: none;
   }
 }
 
-.follow-us__wrapper li:nth-child(5n-2) {
+.follow-us__galleryli:nth-child(5n-2) {
   @include mobile {
     display: none;
   }
 }
 
-.follow-us__wrapper li:nth-child(4n) {
+.follow-us__gallery li:nth-child(4n) {
   grid-row: 1 / -1;
   grid-column: 2 / 3;
 
@@ -140,7 +144,7 @@
   }
 }
 
-.follow-us__wrapper li:nth-child(4n) img {
+.follow-us__gallery li:nth-child(4n) img {
   @include tablet {
     width: 231px;
     height: 240px;
@@ -152,7 +156,7 @@
   }
 }
 
-.follow-us__wrapper li:nth-child(n+5) img {
+.follow-us__gallery li:nth-child(n+5) img {
   @include tablet {
     width: 133px;
     height: 87px;
