@@ -111,38 +111,25 @@ const handleAccordion = (() => {
 
 handleAccordion.manageAccordion(); // Аккордеон на странице каталога
 
-const handleFilter = (() => {
-  const accordion = document.getElementById('filter');
+(function handleFilter() {
+  const filter = document.getElementById('filter');
+  const filterTab = filter.querySelectorAll('.goods__tab');
 
-  const showText = textEl => {
-    textEl.style.height = textEl.scrollHeight + 'px';
-  };
+  if (filter) {
+    for (let i = 0; i < filterTab.length; i++) {
+      filterTab[i].addEventListener('click', evt => {
+        evt.preventDefault();
 
-  const hideText = textItem => {
-    textItem.style.height = '0';
-  };
-
-  return {
-    manageFilter: () => {
-      if (accordion) {
-        accordion.addEventListener('click', evt => {
-          const targ = evt.target;
-          if (targ.tagName !== 'H3') return;
-
-          if (!targ.classList.contains('filter-title--select')) {
-            targ.classList.add('filter-title--select');
-            showText(targ.nextElementSibling);
-          } else {
-            targ.classList.remove('filter-title--select');
-            hideText(targ.nextElementSibling);
-          }
-        });
-      }
+        if (!filterTab[i].classList.contains('goods__tab--open')) {
+          filterTab[i].classList.add('goods__tab--open');
+        } else {
+          filterTab[i].classList.remove('goods__tab--open');
+        }
+      });
     }
-  };
-})();
+  }
+})(); // Слайдер Swiper
 
-handleFilter.manageFilter(); // Слайдер Swiper
 
 new Swiper('.slider-swiper', {
   navigation: {

@@ -76,9 +76,9 @@
         <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
 
           <div class="goods__accordion" id="filter">
-            <div class="goods__tab">
+            <div class="goods__tab goods__tab--open">
               <h3 class="goods__title filter-title">Product</h3>
-              <div class="goods__tab-content tab-content">
+              <div class="goods__tab-content">
                 <ul>
                   <li>
                     <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked>
@@ -101,7 +101,7 @@
             </div>
             <div class="goods__tab">
               <h3 class="goods__title filter-title">Material</h3>
-              <div class="goods__tab-content tab-content">
+              <div class="goods__tab-content">
                 <ul>
                   <li>
                     <input class="visually-hidden" type="checkbox" name="gold" id="gold">
@@ -116,7 +116,7 @@
             </div>
             <div class="goods__tab">
               <h3 class="goods__title filter-title">Collection</h3>
-              <div class="goods__tab-content tab-content">
+              <div class="goods__tab-content">
                 <ul>
                   <li>
                     <input class="visually-hidden" type="checkbox" name="flamingo" id="flamingo">
@@ -129,9 +129,9 @@
                 </ul>
               </div>
             </div>
-            <div class="goods__tab">
+            <div class="goods__tab goods__tab--open">
               <h3 class="goods__title filter-title">Price</h3>
-              <div class="goods__tab-content tab-content">
+              <div class="goods__tab-content">
                 <div class="goods__range-controls range">
                   <div class="range__scale">
                     <div class="range__bar"></div>
@@ -240,8 +240,9 @@
                       srcset="img/catalog-black-choker-mobile@1x.webp 1x, img/catalog-black-choker-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023.99px)"
                       srcset="img/catalog-black-choker-tablet@1x.webp 1x, img/catalog-black-choker-tablet@2x.webp 2x">
-                    <img src="img/catalog-black-choker-desktop@1x.jpg" srcset="img/catalog-black-choker-desktop@2x.jpg 2x"
-                      width="270" height="272" alt="Черный кожаный чокер">
+                    <img src="img/catalog-black-choker-desktop@1x.jpg"
+                      srcset="img/catalog-black-choker-desktop@2x.jpg 2x" width="270" height="272"
+                      alt="Черный кожаный чокер">
                   </picture>
                   <figcaption>Black leather choker</figcaption>
                 </figure>
@@ -254,8 +255,9 @@
                       srcset="img/catalog-purple-stone-mobile@1x.webp 1x, img/catalog-purple-stone-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023.99px)"
                       srcset="img/catalog-purple-stone-tablet@1x.webp 1x, img/catalog-purple-stone-tablet@2x.webp 2x">
-                    <img src="img/catalog-purple-stone-desktop@1x.jpg" srcset="img/catalog-purple-stone-desktop@2x.jpg 2x"
-                      width="270" height="272" alt="Ожерелье с фиолетовым аметистом">
+                    <img src="img/catalog-purple-stone-desktop@1x.jpg"
+                      srcset="img/catalog-purple-stone-desktop@2x.jpg 2x" width="270" height="272"
+                      alt="Ожерелье с фиолетовым аметистом">
                   </picture>
                   <figcaption>Necklace with amethyst</figcaption>
                 </figure>
@@ -283,8 +285,9 @@
                       srcset="img/catalog-silver-chain-mobile@1x.webp 1x, img/catalog-silver-chain-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023.99px)"
                       srcset="img/catalog-silver-chain-tablet@1x.webp 1x, img/catalog-silver-chain-tablet@2x.webp 2x">
-                    <img src="img/catalog-silver-chain-desktop@1x.jpg" srcset="img/catalog-silver-chain-desktop@2x.jpg 2x"
-                      width="270" height="272" alt="Серебрянное ожерелье с подвеской-иглой">
+                    <img src="img/catalog-silver-chain-desktop@1x.jpg"
+                      srcset="img/catalog-silver-chain-desktop@2x.jpg 2x" width="270" height="272"
+                      alt="Серебрянное ожерелье с подвеской-иглой">
                   </picture>
                   <figcaption>Threader necklace</figcaption>
                 </figure>
@@ -525,7 +528,8 @@
               <label class="visually-hidden" for="email-popup">Ваш логин-электронный адрес</label>
             </li>
             <li>
-              <input type="password" placeholder="Password" name="password" id="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+              <input type="password" placeholder="Password" name="password" id="password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
               <label class="visually-hidden" for="password">Ваш пароль</label>
               <a href="" aria-label="Нажмите, если забыли свой пароль">Forgot your password?</a>
             </li>
