@@ -88,8 +88,6 @@
 
 .page-footer__signin-input {
   position: relative;
-  display: flex;
-  justify-content: space-between;
 
   @include tablet {
     transform: translate(-3px, -2px);
@@ -98,6 +96,11 @@
   @include mobile {
     transform: translate(-3px, 7px);
   }
+}
+
+.page-footer__signin-input form {
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-footer__signin-input input {
@@ -125,16 +128,25 @@
   left: 0;
 }
 
-.page-footer__signin-input a {
+.page-footer__signin-input button {
   font-size: 16px;
   line-height: 21px;
   width: 106px;
+  background-color: $black;
+  border: none;
+  color: $white;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 114px;
+  cursor: pointer;
 
   @include poppins-medium;
 }
 
 .page-footer__signin-input svg {
-  margin: 0 0 0 12px;
+  margin: 0 0 0 24px;
   stroke: $white;
 
   @include mobile {
@@ -142,7 +154,7 @@
   }
 }
 
-.page-footer__signin-input a:hover {
+.page-footer__signin-input button:hover {
   color: $pink;
 
   svg {
