@@ -54,11 +54,13 @@
   background-color: $brown-main;
 }
 
+.slider-swiper__slide {
+  display: block;
+  cursor: pointer;
+}
 
-.slider-swiper__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.slider-swiper__slide:hover {
+  box-shadow: 0 0 10px $brown-main;
 }
 
 .slider-swiper__slide:nth-child(3n) {
@@ -67,10 +69,16 @@
   }
 }
 
-.slider-swiper__slide:nth-child(3n) + div {
+.slider-swiper__slide:nth-child(3n)+div {
   @include tablet {
     display: none;
   }
+}
+
+.slider-swiper__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slider-swiper__content img {

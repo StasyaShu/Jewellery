@@ -110,26 +110,23 @@ const handleAccordion = (() => {
 })();
 
 handleAccordion.manageAccordion(); // Аккордеон на странице каталога
-
-(function handleFilter() {
-  const filter = document.getElementById('filter');
-  const filterTab = filter.querySelectorAll('.goods__tab');
-
-  if (filter) {
-    for (let i = 0; i < filterTab.length; i++) {
-      filterTab[i].addEventListener('click', evt => {
-        evt.preventDefault();
-
-        if (!filterTab[i].classList.contains('goods__tab--open')) {
-          filterTab[i].classList.add('goods__tab--open');
-        } else {
-          filterTab[i].classList.remove('goods__tab--open');
-        }
-      });
-    }
-  }
-})(); // Слайдер Swiper
-
+// (function handleFilter() {
+//   const filter = document.getElementById('filter');
+//   const filterTab = filter.querySelectorAll('.goods__tab');
+//   if (filter) {
+//     for (let i = 0; i < filterTab.length; i++) {
+//       filterTab[i].addEventListener('click', (evt) => {
+//         evt.preventDefault();
+//         if (!filterTab[i].classList.contains('goods__tab--open')) {
+//           filterTab[i].classList.add('goods__tab--open');
+//         } else {
+//           filterTab[i].classList.remove('goods__tab--open');
+//         }
+//       })
+//     }
+//   }
+// })();
+// Слайдер Swiper
 
 new Swiper('.slider-swiper', {
   navigation: {
