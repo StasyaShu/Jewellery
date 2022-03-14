@@ -1,3 +1,19 @@
+// Форма поиска
+
+const searchData = (() => {
+  const searchForm = document.getElementById('search-form');
+  const inputSearch = document.getElementById('search');
+
+  if (searchForm) {
+    searchForm.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+      localStorage.setItem('search', inputSearch.value);
+      inputSearch.value = '';
+    })
+  }
+})();
+
+
 // Мобильное бургер-меню
 
 const handleMobileMenu = (() => {
@@ -31,6 +47,7 @@ const handleLoginPopup = (() => {
   const body = document.querySelector('body');
   const loginButton = document.querySelector('.page-header__link--login');
   const loginPopup = document.querySelector('.popup-login');
+  const loginForm = loginPopup.querySelector('form');
   const loginPopupCloseButton = document.querySelector('.popup-login__close-button');
   const popupOverlay = document.querySelector('.overlay');
   const ESC_KEY_CODE = 27;
@@ -68,10 +85,23 @@ const handleLoginPopup = (() => {
           body.style.overflow = 'scroll';
         })
       }
+    },
+
+    enterLogin: () => {
+      loginForm.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        const popupInputEmail = document.getElementById('email-popup');
+        localStorage.setItem('email', popupInputEmail.value);
+        popupInputEmail.value = '';
+        loginPopup.classList.add('popup-login--hide');
+        popupOverlay.classList.remove('overlay--active');
+        body.style.overflow = 'scroll';
+      })
     }
   }
 })()
 handleLoginPopup.showPopup();
+handleLoginPopup.enterLogin();
 
 // Аккордеон на главной странице
 

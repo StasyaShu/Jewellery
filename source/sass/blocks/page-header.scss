@@ -145,6 +145,12 @@
   }
 }
 
+.page-header__search form {
+  @include tablet {
+    width: 100%;
+  }
+}
+
 .page-header__search input {
   border: none;
   margin: 0 0 0 17px;
@@ -159,21 +165,43 @@
   }
 }
 
-.page-header__search svg {
-  stroke: $black;
+.page-header__search button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 
   @include tablet {
-    stroke: $white;
-    fill: $white;
     position: absolute;
-    left: 10px;
-    opacity: 0.6;
+    left: 9px;
+    top: 12px;
   }
 
   @include mobile {
     left: 11px;
   }
 }
+
+.page-header__search svg {
+  stroke: $black;
+
+  @include tablet {
+    stroke: $white;
+    fill: $white;
+    opacity: 0.6;
+  }
+}
+
+.page-header__search button:hover svg {
+  stroke: $brown-dark;
+
+  @include tablet {
+    stroke: $pink;
+    fill: $pink;
+    opacity: 0.6;
+  }
+}
+
+
 
 .page-header__search input::placeholder {
   color: $pale-text;
