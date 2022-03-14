@@ -1,23 +1,22 @@
 .popup-login {
   display: block;
-  width: 31%;
+  min-width: 442px;
   position: absolute;
   top: 100px;
-  left: 34%;
+  left: 30%;
   transform: translate(4px, 0);
   z-index: 5;
   background-color: $beige;
 
   @include tablet {
-    width: 57%;
-    left: 161px;
+    left: 23%;
     top: 81px;
   }
 
   @include mobile {
-    width: 84%;
+    min-width: 270px;
     top: 50px;
-    left: 20px;
+    left: 10%;
   }
 }
 
