@@ -120,24 +120,40 @@ handleAccordion.manageAccordion();
 
 // Аккордеон на странице каталога
 
-// (function handleFilter() {
-//   const filter = document.getElementById('filter');
-//   const filterTab = filter.querySelectorAll('.goods__tab');
+const handleFilter = (() => {
 
-//   if (filter) {
-//     for (let i = 0; i < filterTab.length; i++) {
+  const filterCatalog = document.getElementById('filter');
 
-//       filterTab[i].addEventListener('click', (evt) => {
-//         evt.preventDefault();
-//         if (!filterTab[i].classList.contains('goods__tab--open')) {
-//           filterTab[i].classList.add('goods__tab--open');
-//         } else {
-//           filterTab[i].classList.remove('goods__tab--open');
-//         }
-//       })
-//     }
-//   }
-// })();
+  const showText = (textEl) => {
+    textEl.style.height = textEl.scrollHeight + 'px';
+  }
+
+  const hideText = (textItem) => {
+    textItem.style.height = '0';
+  }
+
+  return {
+    manageFilter: () => {
+      if (filterCatalog) {
+
+        filterCatalog.addEventListener('click', (evt) => {
+
+          const targ = evt.target;
+          if (targ.tagName !== 'H3') return;
+
+          if (!targ.classList.contains('filter-title--select')) {
+            targ.classList.add('filter-title--select');
+            showText(targ.nextElementSibling);
+          } else {
+            targ.classList.remove('filter-title--select');
+            hideText(targ.nextElementSibling);
+          }
+        })
+      }
+    }
+  }
+})()
+handleFilter.manageFilter();
 
 
 // Слайдер Swiper
@@ -240,7 +256,7 @@ const handlePopup = (() => {
     },
 
     useFilterAccordion: () => {
-      const filterAccordion = document.querySelector('.filter');
+      const filterAccordion = document.getElementById('filter-popup');
 
       const showText = (textEl) => {
         textEl.style.height = textEl.scrollHeight + 'px';
@@ -257,11 +273,11 @@ const handlePopup = (() => {
           const targ = evt.target;
           if (targ.tagName !== 'H3') return;
 
-          if (!targ.classList.contains('accordion-title--select')) {
-            targ.classList.add('accordion-title--select');
+          if (!targ.classList.contains('filter-title--select')) {
+            targ.classList.add('filter-title--select');
             showText(targ.nextElementSibling);
           } else {
-            targ.classList.remove('accordion-title--select');
+            targ.classList.remove('filter-title--select');
             hideText(targ.nextElementSibling);
           }
         })

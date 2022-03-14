@@ -55,102 +55,60 @@
 .goods__tab {
   cursor: pointer;
   position: relative;
-  padding: 23px 26px 22px;
-
-  @include mobile {
-    padding: 50px 18px 30px;
-  }
-}
-
-.goods__tab h3 {
-  font-size: 18px;
-  line-height: 23px;
-  color: $dark;
-  display: block;
-  width: 100%;
-  margin: 0;
   padding: 0;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease 0s;
-
-  @include poppins-medium;
-
-  @include tablet {
-    margin: 0;
-  }
-
-  @include mobile {
-    font-size: 16px;
-    line-height: 22px;
-    width: 81%;
-  }
 }
 
-.goods__tab h3::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 5px;
-  top: 6px;
-  width: 17px;
-  height: 10px;
-  background-image: url("../img/icon-filter-down-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+// .goods__tab h3 {
+//   font-size: 18px;
+//   line-height: 23px;
+//   color: $dark;
+//   display: block;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+//   cursor: pointer;
+//   position: relative;
+//   transition: all 0.3s ease 0s;
 
-  @include tablet {
-    width: 25px;
-    height: 14px;
-    background-image: url("../img/icon-filter-down-tablet.svg");
-  }
+//   @include poppins-medium;
 
-  @include mobile {
-    width: 22px;
-    height: 12px;
-    background-image: url("../img/icon-filter-down-mobile.svg");
-    right: -47px;
-  }
-}
+//   @include tablet {
+//     margin: 0;
+//   }
 
-// Открытые табы
+//   @include mobile {
+//     font-size: 16px;
+//     line-height: 22px;
+//     width: 81%;
+//   }
+// }
 
-.goods__tab--open div:first-of-type {
-  height: auto;
-}
+// .goods__tab h3::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   right: 5px;
+//   top: 6px;
+//   width: 17px;
+//   height: 10px;
+//   background-image: url("../img/icon-filter-down-desktop.svg");
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+//   transition: all 0.3s ease 0s;
 
-.goods__tab--open h3 {
-  margin: 0 0 22px;
-  transition: all 0.3s ease 0s;
-}
+//   @include tablet {
+//     width: 25px;
+//     height: 14px;
+//     background-image: url("../img/icon-filter-down-tablet.svg");
+//   }
 
-.goods__tab--open h3::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 5px;
-  top: 6px;
-  width: 17px;
-  height: 10px;
-  background-image: url("../img/icon-filter-up-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  @include tablet {
-    width: 25px;
-    height: 14px;
-    background-image: url("../img/icon-filter-up-tablet.svg");
-  }
-
-  @include mobile {
-    width: 22px;
-    height: 12px;
-    background-image: url("../img/icon-filter-up-mobile.svg");
-    right: -47px;
-  }
-}
-
-// ...
+//   @include mobile {
+//     width: 22px;
+//     height: 12px;
+//     background-image: url("../img/icon-filter-down-mobile.svg");
+//     right: -47px;
+//   }
+// }
 
 .goods__tab:not(:last-child)::after {
   content: "";
@@ -172,10 +130,8 @@
 .goods__tab-content {
   height: 0;
   overflow: hidden;
-  transition: height 1s;
   width: 100%;
 }
-
 
 .goods__tab-content label {
   cursor: pointer;
@@ -236,6 +192,45 @@
 .goods__button-clear {
   width: 100%;
 }
+
+// Открытые табы
+
+// .goods__tab--open div:first-of-type {
+//   height: auto;
+// }
+
+// .goods__tab--open h3 {
+//   margin: 0 0 22px;
+//   transition: all 0.3s ease 0s;
+// }
+
+// .goods__tab--open h3::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   right: 5px;
+//   top: 6px;
+//   width: 17px;
+//   height: 10px;
+//   background-image: url("../img/icon-filter-up-desktop.svg");
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+//   transition: all 0.3s ease 0s;
+
+//   @include tablet {
+//     width: 25px;
+//     height: 14px;
+//     background-image: url("../img/icon-filter-up-tablet.svg");
+//   }
+
+//   @include mobile {
+//     width: 22px;
+//     height: 12px;
+//     background-image: url("../img/icon-filter-up-mobile.svg");
+//     right: -47px;
+//   }
+// }
+
 
 // Список товаров
 

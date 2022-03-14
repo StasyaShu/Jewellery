@@ -4,20 +4,16 @@
 
 .filter__tab {
   position: relative;
-  padding: 50px 38px 30px;
-
-  @include mobile {
-    padding: 50px 18px 30px;
-  }
+  padding: 0;
 }
 
 .filter__tab:not(:last-child)::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 133%;
   height: 1px;
   bottom: -2px;
-  left: 0;
+  left: -42px;
   background-color: $brown-main;
 }
 
@@ -46,7 +42,7 @@
   @include poppins-medium;
 }
 
-.filter__tab-content input + label::before {
+.filter__tab-content input+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -57,11 +53,11 @@
   background-color: transparent;
 }
 
-.filter__tab-content input:hover + label::before {
+.filter__tab-content input:hover+label::before {
   background-color: $pink;
 }
 
-.filter__tab-content input:checked + label::before {
+.filter__tab-content input:checked+label::before {
   background-color: $brown-main;
 }
 
@@ -70,7 +66,7 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 30px 0;
 }
 
 .filter__tab-content li {

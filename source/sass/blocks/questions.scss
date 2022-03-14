@@ -44,16 +44,11 @@
 
 .questions__tab {
   position: relative;
-  padding: 50px 50px 33px;
+  padding: 0;
   transform: translate(0, -5px);
 
   @include tablet {
-    padding: 44px 48px 44px;
     transform: translate(0, 0);
-  }
-
-  @include mobile {
-    padding: 15px 15px 24px;
   }
 }
 
@@ -70,9 +65,9 @@
 .questions__text {
   height: 0;
   overflow: hidden;
-  padding: 0 0 0 8px;
-  transition: height 1s;
-  width: 59%;
+  padding: 0 0 0 62px;
+  transition: all 1s;
+  width: 58%;
 
   @include tablet {
     width: 97%;

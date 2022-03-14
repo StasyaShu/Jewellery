@@ -4,10 +4,11 @@
   color: $dark;
   display: block;
   width: 100%;
-  margin: 0 0 5px 0;
-  padding: 0;
+  margin: 0;
+  padding: 50px 50px 33px;
   cursor: pointer;
   position: relative;
+  transition: all 0.3s ease 0s;
 
   @include poppins-medium;
 
@@ -26,13 +27,14 @@
   content: "";
   display: block;
   position: absolute;
-  right: 5px;
-  top: 6px;
+  right: 5%;
+  top: 50%;
   width: 17px;
   height: 10px;
   background-image: url("../img/icon-filter-down-desktop.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  transition: all 0.3s ease 0s;
 
   @include tablet {
     width: 25px;
@@ -56,10 +58,11 @@
   color: $dark;
   display: block;
   width: 100%;
-  margin: 0 0 9px 0;
-  padding: 0;
+  margin: 0;
+  padding: 50px 50px 21px;
   cursor: pointer;
   position: relative;
+  transition: all 0.3s ease 0s;
 
   @include poppins-medium;
 
@@ -79,13 +82,14 @@
   content: "";
   display: block;
   position: absolute;
-  right: 5px;
-  top: 6px;
+  right: 5%;
+  top: 50%;
   width: 17px;
   height: 10px;
   background-image: url("../img/icon-filter-up-desktop.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  transition: all 0.3s ease 0s;
 
   @include tablet {
     width: 25px;

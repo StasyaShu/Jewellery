@@ -1,104 +1,104 @@
-// .filter-title {
-//   font-size: 18px;
-//   line-height: 23px;
-//   color: $dark;
-//   display: block;
-//   width: 100%;
-//   margin: 0;
-//   padding: 0;
-//   cursor: pointer;
-//   position: relative;
-//   transition: all 0.3s ease 0s;
+.filter-title {
+  font-size: 18px;
+  line-height: 23px;
+  color: $dark;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 25px 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease 0s;
 
-//   @include poppins-medium;
+  @include poppins-medium;
 
-//   @include tablet {
-//     margin: 0;
-//   }
+  @include tablet {
+    margin: 0;
+  }
 
-//   @include mobile {
-//     font-size: 16px;
-//     line-height: 22px;
-//     width: 81%;
-//   }
-// }
+  @include mobile {
+    font-size: 16px;
+    line-height: 22px;
+    width: 81%;
+  }
+}
 
-// .filter-title::after {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   right: 5px;
-//   top: 6px;
-//   width: 17px;
-//   height: 10px;
-//   background-image: url("../img/icon-filter-down-desktop.svg");
-//   background-repeat: no-repeat;
-//   background-position: 0 0;
+.filter-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 40%;
+  width: 17px;
+  height: 10px;
+  background-image: url("../img/icon-filter-down-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 
-//   @include tablet {
-//     width: 25px;
-//     height: 14px;
-//     background-image: url("../img/icon-filter-down-tablet.svg");
-//   }
+  @include tablet {
+    width: 25px;
+    height: 14px;
+    background-image: url("../img/icon-filter-down-tablet.svg");
+  }
 
-//   @include mobile {
-//     width: 22px;
-//     height: 12px;
-//     background-image: url("../img/icon-filter-down-mobile.svg");
-//     right: -47px;
-//   }
-// }
+  @include mobile {
+    width: 22px;
+    height: 12px;
+    background-image: url("../img/icon-filter-down-mobile.svg");
+    right: -47px;
+  }
+}
 
-// Открытый аккордеон
+Открытый аккордеон
 
-// .filter-title--select {
-//   font-size: 18px;
-//   line-height: 23px;
-//   color: $dark;
-//   display: block;
-//   width: 100%;
-//   margin: 0 0 22px;
-//   padding: 0;
-//   cursor: pointer;
-//   position: relative;
-//   transition: all 0.3s ease 0s;
+.filter-title--select {
+  font-size: 18px;
+  line-height: 23px;
+  color: $dark;
+  display: block;
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease 0s;
 
-//   @include poppins-medium;
+  @include poppins-medium;
 
-//   @include tablet {
-//     margin: 0 0 27px 0;
-//   }
+  @include tablet {
+    margin: 0 0 27px 0;
+  }
 
-//   @include mobile {
-//     font-size: 16px;
-//     line-height: 22px;
-//     margin: 0 0 14px 0;
-//     width: 81%;
-//   }
-// }
+  @include mobile {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 14px 0;
+    width: 81%;
+  }
+}
 
-// .filter-title--select::after {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   right: 5px;
-//   top: 6px;
-//   width: 17px;
-//   height: 10px;
-//   background-image: url("../img/icon-filter-up-desktop.svg");
-//   background-repeat: no-repeat;
-//   background-position: 0 0;
+.filter-title--select::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 40%;
+  width: 17px;
+  height: 10px;
+  background-image: url("../img/icon-filter-up-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 
-//   @include tablet {
-//     width: 25px;
-//     height: 14px;
-//     background-image: url("../img/icon-filter-up-tablet.svg");
-//   }
+  @include tablet {
+    width: 25px;
+    height: 14px;
+    background-image: url("../img/icon-filter-up-tablet.svg");
+  }
 
-//   @include mobile {
-//     width: 22px;
-//     height: 12px;
-//     background-image: url("../img/icon-filter-up-mobile.svg");
-//     right: -47px;
-//   }
-// }
+  @include mobile {
+    width: 22px;
+    height: 12px;
+    background-image: url("../img/icon-filter-up-mobile.svg");
+    right: -47px;
+  }
+}

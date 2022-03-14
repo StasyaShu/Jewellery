@@ -76,7 +76,7 @@
         <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
 
           <div class="goods__accordion" id="filter">
-            <div class="goods__tab goods__tab--open">
+            <div class="goods__tab">
               <h3 class="goods__title filter-title">Product</h3>
               <div class="goods__tab-content">
                 <ul>
@@ -129,7 +129,7 @@
                 </ul>
               </div>
             </div>
-            <div class="goods__tab goods__tab--open">
+            <div class="goods__tab">
               <h3 class="goods__title filter-title">Price</h3>
               <div class="goods__tab-content">
                 <div class="goods__range-controls range">
@@ -433,9 +433,9 @@
     <div class="popup-filter__wrapper">
       <button class="popup-filter__close-button"></button>
       <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
-        <div class="filter">
+        <div class="filter" id="filter-popup">
           <div class="filter__tab">
-            <h3 class="filter__title accordion-title">Product</h3>
+            <h3 class="filter__title filter-title">Product</h3>
             <div class="filter__tab-content tab-content">
               <ul>
                 <li>
@@ -458,7 +458,7 @@
             </div>
           </div>
           <div class="filter__tab">
-            <h3 class="filter__title accordion-title">Material</h3>
+            <h3 class="filter__title filter-title">Material</h3>
             <div class="filter__tab-content tab-content">
               <ul>
                 <li>
@@ -473,7 +473,7 @@
             </div>
           </div>
           <div class="filter__tab">
-            <h3 class="filter__title accordion-title">Collection</h3>
+            <h3 class="filter__title filter-title">Collection</h3>
             <div class="filter__tab-content tab-content">
               <ul>
                 <li>
@@ -488,7 +488,7 @@
             </div>
           </div>
           <div class="filter__tab">
-            <h3 class="filter__title accordion-title">Price</h3>
+            <h3 class="filter__title filter-title">Price</h3>
             <div class="filter__tab-content tab-content">
               <div class="filter__range-controls range">
                 <div class="range__scale">
@@ -505,6 +505,7 @@
       </form>
     </div>
   </div>
+
   <div class="popup-login popup-login--hide">
     <picture>
       <source type="image/webp" media="(max-width: 767.99px)"
