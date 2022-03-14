@@ -41,7 +41,7 @@
 
   @include mobile {
     align-items: stretch;
-    gap: 40px;
+    gap: 0;
   }
 }
 
@@ -54,6 +54,7 @@
 
   @include mobile {
     width: 100%;
+    margin: 0 0 40px 0;
   }
 }
 

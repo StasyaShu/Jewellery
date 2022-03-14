@@ -57,7 +57,7 @@
   position: absolute;
   cursor: pointer;
   top: 20px;
-  right: 22px;
+  right: 30px;
   border: none;
   background: transparent;
   width: 14px;
@@ -70,7 +70,7 @@
 
   @include mobile {
     top: 14px;
-    right: 15px;
+    right: 20px;
   }
 }
 
