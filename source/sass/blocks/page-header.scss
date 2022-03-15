@@ -11,6 +11,10 @@
     height: 100px;
     transition: height 1s ease 0s;
   }
+
+  @include mobile {
+    height: 93px;
+  }
 }
 
 // Основные стили
@@ -109,10 +113,6 @@
 
   @include tablet {
     transform: translate(0, 0);
-  }
-
-  @include mobile {
-    transform: translate(-12px, -2px);
   }
 }
 
@@ -232,10 +232,6 @@
 
   @include tablet {
     transform: translate(0, 0);
-  }
-
-  @include mobile {
-    transform: translate(-13px, -1px);
   }
 }
 

@@ -236,8 +236,4 @@
   color: $dark;
 
   @include poppins-medium;
-
-  @include mobile {
-    transform: translate(-20px, 1px);
-  }
 }

@@ -22,7 +22,7 @@
 
   @include mobile {
     flex-direction: column;
-    padding: 51px 5%;
+    padding: 51px 5% 66px;
   }
 }
 
@@ -219,6 +219,7 @@
   }
 }
 
+
 // Блок соцсетей
 
 .page-footer__social ul {
@@ -237,7 +238,7 @@
     flex-direction: row;
     height: auto;
     width: 168px;
-    padding: 5px 0 0;
+    padding: 13px 0 0 0;
     transform: translate(-6px, -1px);
   }
 }

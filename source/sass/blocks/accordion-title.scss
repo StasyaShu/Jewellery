@@ -20,7 +20,8 @@
   @include mobile {
     font-size: 16px;
     line-height: 22px;
-    padding: 50px 25px 33px;
+    padding: 9px 0 28px 20px;
+    max-width: 192px;
   }
 }
 
@@ -46,6 +47,8 @@
   }
 
   @include mobile {
+    right: -36%;
+    top: 16%;
     width: 22px;
     height: 12px;
     background-image: url("../img/icon-filter-down-mobile.svg");
@@ -76,8 +79,9 @@
   @include mobile {
     font-size: 16px;
     line-height: 22px;
-    margin: 0 0 -17px;
-    padding: 50px 25px 33px;
+    margin: 0;
+    padding: 16px 21px 16px;
+    max-width: 227px;
   }
 }
 
@@ -103,6 +107,8 @@
   }
 
   @include mobile {
+    right: -15%;
+    top: 32%;
     width: 22px;
     height: 12px;
     background-image: url("../img/icon-filter-up-mobile.svg");
