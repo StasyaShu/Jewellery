@@ -9,7 +9,7 @@
 }
 
 .page-footer__wrapper {
-  padding: 85px 20px 95px;
+  padding: 85px 17px 95px;
   max-width: 1210px;
   margin: 0 auto;
   display: flex;
@@ -166,13 +166,13 @@
 
 .page-footer__services-list ul {
   list-style: none;
-  margin: 0 0 0 20px;
-  padding: 13px 0 0 0;
+  margin: 0 0 0 22px;
+  padding: 9px 0 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content min-content min-content;
   row-gap: 20px;
-  column-gap: 42px;
+  column-gap: 71px;
 
   @include tablet {
     margin: 0;
@@ -200,7 +200,7 @@
 
 .page-footer__services-list li {
   @include mobile {
-    margin: 0 0 22px 0;
+    margin: 0 0 20px 0;
   }
 }
 
@@ -215,7 +215,7 @@
 .page-footer__social ul {
   list-style: none;
   margin: 0;
-  padding: 13px 0 0 0;
+  padding: 9px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -265,7 +265,7 @@
 .page-footer__social span {
   text-align: left;
   display: block;
-  margin: 0 0 0 15px;
+  margin: 0 0 0 18px;
 
   @include mobile {
     display: none;
