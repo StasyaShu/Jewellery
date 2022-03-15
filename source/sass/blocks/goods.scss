@@ -132,6 +132,7 @@
   overflow: hidden;
   transition: height 1s;
   width: 100%;
+  padding: 0 26px;
 }
 
 .goods__tab-content label {
@@ -169,7 +170,7 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0 0 33px 20px;
+  padding: 0 0 33px 0;
 }
 
 .goods__tab-content li {

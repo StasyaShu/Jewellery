@@ -44,6 +44,15 @@
   @include poppins-medium;
 }
 
+.slider-swiper__title a:hover {
+  font-size: 17px;
+}
+
+.slider-swiper__title a:active {
+  font-size: 17px;
+  box-shadow: 0 0 10px $brown-main;
+}
+
 .slider-swiper__title a::after {
   content: "";
   position: absolute;
@@ -69,7 +78,7 @@
   }
 }
 
-.slider-swiper__slide:nth-child(3n)+div {
+.slider-swiper__slide:nth-child(3n)+a {
   @include tablet {
     display: none;
   }

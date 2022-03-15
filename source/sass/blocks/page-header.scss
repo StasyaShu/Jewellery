@@ -125,6 +125,10 @@
   }
 }
 
+.page-header__logo:hover svg {
+  fill: $dark;
+}
+
 // Поле поиска
 
 .page-header__search {

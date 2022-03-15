@@ -83,6 +83,15 @@
   background-color: $brown-main;
 }
 
+.follow-us__wrapper a:hover {
+  font-size: 17px;
+}
+
+.follow-us__wrapper a:active {
+  font-size: 17px;
+  box-shadow: 0 0 10px $brown-main;
+}
+
 // Список картинок
 
 .follow-us__gallery {
@@ -128,7 +137,7 @@
   }
 }
 
-.follow-us__galleryli:nth-child(5n-2) {
+.follow-us__gallery li:nth-child(5n-2) {
   @include mobile {
     display: none;
   }

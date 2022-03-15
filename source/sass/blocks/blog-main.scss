@@ -1,13 +1,13 @@
 // Основные стили блока
 
 .blog-main__wrapper {
-  padding: 0 7% 119px;
+  padding: 0 4% 119px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include tablet {
-    padding: 0 6% 68px;
+    padding: 0 5% 68px;
   }
 
   @include mobile {
@@ -116,6 +116,15 @@
   bottom: -5px;
   left: 0;
   background-color: $brown-main;
+}
+
+.blog-main__header a:hover {
+  font-size: 17px;
+}
+
+.blog-main__header a:active {
+  font-size: 17px;
+  box-shadow: 0 0 10px $brown-main;
 }
 
 // Первая запись в блоге об уходе
@@ -256,8 +265,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 300px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 79px 67px;
   background-color: $beige;
 
   @include tablet {

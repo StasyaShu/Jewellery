@@ -7,10 +7,10 @@
   padding: 0;
 }
 
-.filter__tab:not(:last-child)::after {
+.filter__tab::after {
   content: "";
   position: absolute;
-  width: 133%;
+  width: 124%;
   height: 1px;
   bottom: -2px;
   left: -42px;

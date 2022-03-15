@@ -119,6 +119,9 @@ const handleAccordion = (() => {
   return {
     manageAccordion: () => {
       if (accordion) {
+        const firstTab = accordion.querySelector('h3:first-of-type');
+        firstTab.classList.add('accordion-title--select');
+        showText(firstTab.nextElementSibling);
         accordion.addEventListener('click', evt => {
           const targ = evt.target;
           if (targ.tagName !== 'H3') return;
@@ -152,6 +155,15 @@ const handleFilter = (() => {
   return {
     manageFilter: () => {
       if (filterCatalog) {
+        const filterTab = filterCatalog.querySelectorAll('.filter-title');
+
+        for (let i = 0; i < filterTab.length; i++) {
+          filterTab[0].classList.add('filter-title--select');
+          showText(filterTab[0].nextElementSibling);
+          filterTab[3].classList.add('filter-title--select');
+          showText(filterTab[3].nextElementSibling);
+        }
+
         filterCatalog.addEventListener('click', evt => {
           const targ = evt.target;
           if (targ.tagName !== 'H3') return;
@@ -228,6 +240,7 @@ new Swiper('.slider-swiper', {
 }); // Появление попапа с фильтром на странице каталога
 
 const handlePopup = (() => {
+  const body = document.querySelector('body');
   const filterButton = document.querySelector('.goods__button-filter');
   const filterPopup = document.querySelector('.popup-filter');
   const filterPopupCloseButton = document.querySelector('.popup-filter__close-button');
@@ -255,6 +268,13 @@ const handlePopup = (() => {
           evt.preventDefault();
           filterPopup.classList.add('popup-filter--hide');
           popupOverlay.classList.remove('overlay--active');
+        });
+        document.addEventListener('click', evt => {
+          if (evt.target === popupOverlay) {
+            filterPopup.classList.add('popup-filter--hide');
+            popupOverlay.classList.remove('overlay--active');
+            body.style.overflow = 'scroll';
+          }
         });
       }
     },
