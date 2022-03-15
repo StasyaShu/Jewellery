@@ -16,7 +16,7 @@
   }
 
   @include mobile {
-    padding: 52px 6% 68px;
+    padding: 40px 6% 64px;
   }
 }
 
@@ -227,7 +227,7 @@
   @include mobile {
     grid-template-columns: 0.8fr 0.8fr;
     margin: 0 0 40px 0;
-    gap: 25px;
+    gap: 29px;
   }
 }
 

@@ -37,6 +37,10 @@
   @include tablet {
     padding: 97px 0 0;
   }
+
+  @include mobile {
+    padding: 78px 0 0;
+  }
 }
 
 
