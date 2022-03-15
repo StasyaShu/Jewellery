@@ -119,9 +119,13 @@ const handleAccordion = (() => {
   return {
     manageAccordion: () => {
       if (accordion) {
-        const firstTab = accordion.querySelector('h3:first-of-type');
-        firstTab.classList.add('accordion-title--select');
-        showText(firstTab.nextElementSibling);
+        const tabs = accordion.querySelectorAll('.accordion-title');
+
+        for (let i = 0; i < tabs.length; i++) {
+          tabs[0].classList.add('accordion-title--select');
+          showText(tabs[0].nextElementSibling);
+        }
+
         accordion.addEventListener('click', evt => {
           const targ = evt.target;
           if (targ.tagName !== 'H3') return;

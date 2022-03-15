@@ -129,9 +129,12 @@ const handleAccordion = (() => {
     manageAccordion: () => {
       if (accordion) {
 
-        const firstTab = accordion.querySelector('h3:first-of-type');
-        firstTab.classList.add('accordion-title--select');
-        showText(firstTab.nextElementSibling);
+        const tabs = accordion.querySelectorAll('.accordion-title');
+
+        for (let i = 0; i < tabs.length; i++) {
+          tabs[0].classList.add('accordion-title--select');
+          showText(tabs[0].nextElementSibling);
+        }
 
         accordion.addEventListener('click', (evt) => {
 
@@ -172,7 +175,7 @@ const handleFilter = (() => {
 
         const filterTab = filterCatalog.querySelectorAll('.filter-title');
 
-        for (let i=0; i < filterTab.length; i++) {
+        for (let i = 0; i < filterTab.length; i++) {
           filterTab[0].classList.add('filter-title--select');
           showText(filterTab[0].nextElementSibling);
           filterTab[3].classList.add('filter-title--select');
