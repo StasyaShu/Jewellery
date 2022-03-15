@@ -5,7 +5,7 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding: 51px 43px 39px;
+  padding: 57px 43px 33px;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease 0s;
@@ -14,7 +14,7 @@
 
   @include tablet {
     margin: 0;
-    padding: 57px 50px 33px;
+    padding: 58px 50px 31px;
   }
 
   @include mobile {
@@ -30,7 +30,7 @@
   display: block;
   position: absolute;
   right: 5%;
-  top: 53%;
+  top: 59%;
   width: 17px;
   height: 10px;
   background-image: url("../img/icon-filter-down-desktop.svg");
@@ -40,7 +40,7 @@
 
   @include tablet {
     right: 7%;
-    top: 54%;
+    top: 55%;
     width: 25px;
     height: 14px;
     background-image: url("../img/icon-filter-down-tablet.svg");
@@ -64,7 +64,7 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding: 49px 40px 8px;
+  padding: 51px 41px 8px;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease 0s;
@@ -90,7 +90,7 @@
   display: block;
   position: absolute;
   right: 5%;
-  top: 68%;
+  top: 69%;
   width: 17px;
   height: 10px;
   background-image: url("../img/icon-filter-up-desktop.svg");

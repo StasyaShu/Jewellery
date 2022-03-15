@@ -9,7 +9,7 @@
   align-items: center;
 
   @include tablet {
-    padding: 0 6% 73px;
+    padding: 0 6% 76px;
   }
 
   @include mobile {
@@ -57,7 +57,7 @@
   position: absolute;
   width: 100%;
   height: 1px;
-  bottom: -23px;
+  bottom: -14px;
   left: 0;
   background-color: $brown-main;
 
