@@ -9,14 +9,14 @@
   background-color: $beige;
 
   @include tablet {
-    left: 23%;
+    left: 21%;
     top: 81px;
   }
 
   @include mobile {
     min-width: 270px;
     top: 50px;
-    left: 10%;
+    left: 8%;
   }
 }
 
