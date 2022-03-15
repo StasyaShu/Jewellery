@@ -209,16 +209,40 @@
 
 .page-footer__services-list li {
   @include mobile {
-    margin: 0 0 20px 0;
+    margin: 0 0 21px 0;
   }
 }
 
-.page-footer__services-list li:nth-child(4n+4) {
+.page-footer__services-list li:nth-child(8n-6) {
+  @include mobile {
+    order: 2;
+  }
+}
+
+.page-footer__services-list li:nth-child(8n-4) {
+  @include mobile {
+    order: 3;
+  }
+}
+
+.page-footer__services-list li:nth-child(8n-2) {
+  @include mobile {
+    order: 4;
+  }
+}
+
+.page-footer__services-list li:nth-child(8n-1) {
   @include mobile {
     margin: 0 0 38px 0;
   }
 }
 
+.page-footer__services-list li:last-child {
+  @include mobile {
+    order: 8;
+    margin: 0 0 38px 0;
+  }
+}
 
 // Блок соцсетей
 
