@@ -13,7 +13,7 @@
 
   @media (max-width: 1023.99px) {
     background-image: url("../img/promo-main-tablet@1x.jpg");
-    height: 470px;
+    height: 466px;
   }
 
   @media (max-width: 1023.99px) and (min-resolution: 2dppx) {
@@ -36,7 +36,7 @@
   padding: 179px 0 0 0;
 
   @include tablet {
-    padding: 187px 0 0;
+    padding: 184px 0 0;
     transform: translate(-8px, 1px);
   }
 

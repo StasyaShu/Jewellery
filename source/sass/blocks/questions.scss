@@ -9,7 +9,7 @@
   align-items: center;
 
   @include tablet {
-    padding: 0 6% 66px;
+    padding: 0 6% 73px;
   }
 
   @include mobile {
@@ -57,9 +57,13 @@
   position: absolute;
   width: 100%;
   height: 1px;
-  bottom: -8px;
+  bottom: -23px;
   left: 0;
   background-color: $brown-main;
+
+  @include tablet {
+    bottom: -13px;
+  }
 }
 
 .questions__text {
@@ -70,7 +74,7 @@
   width: 59%;
 
   @include tablet {
-    width: 97%;
+    width: 92%;
     padding: 0 0 0 50px;
   }
 

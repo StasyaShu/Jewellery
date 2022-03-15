@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 55px 0;
 
   @include mobile {
     justify-content: center;
@@ -70,18 +70,6 @@
 
 .slider-swiper__slide:hover {
   box-shadow: 0 0 10px $brown-main;
-}
-
-.slider-swiper__slide:nth-child(3n) {
-  @include tablet {
-    display: none;
-  }
-}
-
-.slider-swiper__slide:nth-child(3n)+a {
-  @include tablet {
-    display: none;
-  }
 }
 
 .slider-swiper__content {
@@ -197,7 +185,8 @@
   @include poppins-medium;
 
   @include tablet {
-    bottom: 8px;
+    bottom: 7px;
+    left: 41%;
   }
 }
 
