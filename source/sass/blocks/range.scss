@@ -1,5 +1,6 @@
 .range {
   position: relative;
+  transform: translate(-3px, -1px);
 }
 
 .range__scale {
@@ -42,11 +43,11 @@
 }
 
 .range__toggle--min {
-  left: 46px;
+  left: 41px;
   top: -7px;
 }
 
 .range__toggle--max {
-  left: 74%;
+  left: 75%;
   top: -7px;
 }

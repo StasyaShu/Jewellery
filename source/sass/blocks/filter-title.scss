@@ -1,11 +1,11 @@
 .filter-title {
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 16px;
+  line-height: 21px;
   color: $dark;
   display: block;
   width: 100%;
   margin: 0;
-  padding: 25px 26px;
+  padding: 18px 17px 24px;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease 0s;
@@ -27,8 +27,8 @@
   content: "";
   display: block;
   position: absolute;
-  right: 26px;
-  top: 40%;
+  right: 24px;
+  top: 36%;
   width: 17px;
   height: 10px;
   background-image: url("../img/icon-filter-down-desktop.svg");
@@ -50,16 +50,16 @@
   }
 }
 
-Открытый аккордеон
+// Открытый аккордеон
 
 .filter-title--select {
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 16px;
+  line-height: 21px;
   color: $dark;
   display: block;
   width: 100%;
-  margin: 0 0 22px;
-  padding: 0;
+  margin: 0;
+  padding: 23px 18px;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease 0s;
@@ -82,7 +82,7 @@
   content: "";
   display: block;
   position: absolute;
-  right: 26px;
+  right: 25px;
   top: 40%;
   width: 17px;
   height: 10px;
