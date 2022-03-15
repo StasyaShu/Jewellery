@@ -439,7 +439,7 @@
       <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
         <div class="filter" id="filter-popup">
           <div class="filter__tab">
-            <h3 class="filter__title filter-title">Product</h3>
+            <h3 class="filter__title popup-filter-title">Product</h3>
             <div class="filter__tab-content tab-content">
               <ul>
                 <li>
@@ -462,7 +462,7 @@
             </div>
           </div>
           <div class="filter__tab">
-            <h3 class="filter__title filter-title">Material</h3>
+            <h3 class="filter__title popup-filter-title">Material</h3>
             <div class="filter__tab-content tab-content">
               <ul>
                 <li>
@@ -477,7 +477,7 @@
             </div>
           </div>
           <div class="filter__tab">
-            <h3 class="filter__title filter-title">Collection</h3>
+            <h3 class="filter__title popup-filter-title">Collection</h3>
             <div class="filter__tab-content tab-content">
               <ul>
                 <li>
@@ -492,9 +492,9 @@
             </div>
           </div>
           <div class="filter__tab">
-            <h3 class="filter__title filter-title">Price</h3>
+            <h3 class="filter__title popup-filter-title">Price</h3>
             <div class="filter__tab-content tab-content">
-              <div class="filter__range-controls range">
+              <div class="filter__range-controls range range--popup">
                 <div class="range__scale">
                   <div class="range__bar"></div>
                 </div>
@@ -504,8 +504,10 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="popup-filter__button button-action">Apply</button>
-        <button type="reset" class="popup-filter__button button-clear">Clear All</button>
+        <div class="filter__buttons">
+          <button type="submit" class="button-action">Apply</button>
+          <button type="reset" class="button-clear">Clear All</button>
+        </div>
       </form>
     </div>
   </div>

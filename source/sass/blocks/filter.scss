@@ -1,5 +1,9 @@
 .filter {
-  margin: 0 0 35px 0;
+  margin: 0 0 82px 0;
+
+  @include mobile {
+    margin: 0 0 43px 0;
+  }
 }
 
 .filter__tab {
@@ -7,14 +11,19 @@
   padding: 0;
 }
 
-.filter__tab::after {
+.filter__tab:not(:last-child)::after {
   content: "";
   position: absolute;
-  width: 124%;
+  width: 120%;
   height: 1px;
   bottom: -2px;
   left: -42px;
   background-color: $brown-main;
+
+  @include mobile {
+    left: 0;
+    width: 100%;
+  }
 }
 
 .filter__title {
@@ -35,8 +44,8 @@
   cursor: pointer;
   position: relative;
   padding: 0 0 0 25px;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 21px;
   color: $dark;
 
   @include poppins-medium;
@@ -66,7 +75,11 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0 0 30px 11px;
+  padding: 0 0 30px 29px;
+
+  @include mobile {
+    padding: 0 0 30px 40px;
+  }
 }
 
 .filter__tab-content li {
@@ -75,9 +88,32 @@
 }
 
 .filter__tab-content li:not(:last-child) {
-  margin: 0 0 25px 0;
+  margin: 0 0 18px 0;
 }
 
 .filter__range-controls {
   margin: 9px 0 23px 0;
+
+  @include mobile {
+    margin: 15px 0 23px;
+    transform: translate(-2px, -6px);
+  }
+}
+
+.filter__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6%;
+  transform: translate(-9px, 1px);
+
+  @include mobile {
+    padding: 0 9%;
+    transform: translate(0, 0);
+  }
+}
+
+.filter__buttons button:first-child {
+  margin: 0 0 20px 0;
 }

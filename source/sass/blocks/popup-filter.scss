@@ -1,12 +1,16 @@
 .popup-filter {
   display: block;
-  max-width: 425px;
+  max-width: 491px;
   position: absolute;
-  top: 382px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 5;
   background-color: $white;
+
+  @include mobile {
+    max-width: 319px;
+  }
 }
 
 .popup-filter--hide {
@@ -14,8 +18,12 @@
 }
 
 .popup-filter__wrapper {
-  padding: 72px 40px 40px;
+  padding: 38px 40px 88px;
   position: relative;
+
+  @include mobile {
+    padding: 76px 19px 29px;
+  }
 }
 
 .popup-filter__wrapper form {
@@ -28,7 +36,7 @@
   cursor: pointer;
   display: block;
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 20px;
   width: 32px;
   height: 32px;
@@ -37,6 +45,11 @@
   background-image: url("../img/icon-close-white.svg");
   background-repeat: no-repeat;
   background-position: 7px 7px;
+
+  @include mobile {
+    top: 59px;
+    right: 15px;
+  }
 }
 
 .popup-filter__close-button:hover {
@@ -45,12 +58,4 @@
 
 .popup-filter__close-button:active {
   box-shadow: 0 0 3px 3px $dark;
-}
-
-.popup-filter__button {
-  width: 100%;
-}
-
-.popup-filter__button:first-of-type {
-  margin: 0 0 25px 0;
 }

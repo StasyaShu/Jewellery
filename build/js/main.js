@@ -257,10 +257,6 @@ const handlePopup = (() => {
           evt.preventDefault();
           filterPopup.classList.remove('popup-filter--hide');
           popupOverlay.classList.add('overlay--active');
-          scrollTo({
-            top: 320,
-            behavior: 'smooth'
-          });
         });
         document.addEventListener('keydown', evt => {
           if (evt.keyCode === ESC_KEY_CODE) {
@@ -298,11 +294,11 @@ const handlePopup = (() => {
           const targ = evt.target;
           if (targ.tagName !== 'H3') return;
 
-          if (!targ.classList.contains('filter-title--select')) {
-            targ.classList.add('filter-title--select');
+          if (!targ.classList.contains('popup-filter-title--select')) {
+            targ.classList.add('popup-filter-title--select');
             showText(targ.nextElementSibling);
           } else {
-            targ.classList.remove('filter-title--select');
+            targ.classList.remove('popup-filter-title--select');
             hideText(targ.nextElementSibling);
           }
         });

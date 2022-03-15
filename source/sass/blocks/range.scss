@@ -51,3 +51,45 @@
   left: 75%;
   top: -7px;
 }
+
+// range for popup
+
+.range--popup .range__toggle--min {
+  width: 18px;
+  height: 18px;
+  left: 74px;
+  top: -7px;
+
+  @include mobile {
+    left: 59px;
+    top: -9px;
+  }
+}
+
+.range--popup .range__toggle--max {
+  width: 18px;
+  height: 18px;
+  left: 61%;
+  top: -7px;
+
+  @include mobile {
+    left: 70%;
+    top: -9px;
+  }
+}
+
+.range--popup .range__bar {
+  left: 73px;
+  width: 47%;
+}
+
+.range--popup .range__toggle span {
+  font-size: 16px;
+  line-height: 21px;
+  width: 40px;
+  margin: 26px 0 0 0;
+
+  @include mobile {
+    margin: 23px 0 0 0;
+  }
+}
