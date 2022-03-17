@@ -46,6 +46,37 @@ const handleLoginPopup = (() => {
   const loginPopupCloseButton = document.querySelector('.popup-login__close-button');
   const popupOverlay = document.querySelector('.overlay');
   const ESC_KEY_CODE = 27;
+  const KEYCODE_TAB = 9;
+
+  const trapFocus = element => {
+    const focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), input[type="text"]:not([disabled]), input[type="password"]:not([disabled]), input[type="email"]:not([disabled]), input[type="checkbox"]:not([disabled]), input[type="radio"]:not([disabled])');
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    element.addEventListener('keydown', function (e) {
+      const isTabPressed = e.key === 'Tab' || e.keyCode === KEYCODE_TAB;
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (e.shiftKey)
+        /* shift + tab */
+        {
+          if (document.activeElement === firstFocusableEl) {
+            lastFocusableEl.focus();
+            e.preventDefault();
+          }
+        } else
+        /* tab */
+        {
+          if (document.activeElement === lastFocusableEl) {
+            firstFocusableEl.focus();
+            e.preventDefault();
+          }
+        }
+    });
+  };
+
   return {
     showPopup: () => {
       if (loginButton) {
@@ -56,6 +87,7 @@ const handleLoginPopup = (() => {
           body.style.overflow = 'hidden';
           const popupInputEmail = document.getElementById('email-popup');
           popupInputEmail.focus();
+          trapFocus(loginPopup);
         });
         document.addEventListener('keydown', evt => {
           if (evt.keyCode === ESC_KEY_CODE) {
@@ -250,6 +282,45 @@ const handlePopup = (() => {
   const filterPopupCloseButton = document.querySelector('.popup-filter__close-button');
   const popupOverlay = document.querySelector('.overlay');
   const ESC_KEY_CODE = 27;
+  const KEYCODE_TAB = 9;
+
+  const showText = textEl => {
+    textEl.style.height = textEl.scrollHeight + 'px';
+  };
+
+  const hideText = textItem => {
+    textItem.style.height = '0';
+  };
+
+  const trapFocus = element => {
+    const focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), input[type="text"]:not([disabled]), input[type="password"]:not([disabled]), input[type="email"]:not([disabled]), input[type="checkbox"]:not([disabled]), input[type="radio"]:not([disabled])');
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    element.addEventListener('keydown', function (e) {
+      const isTabPressed = e.key === 'Tab' || e.keyCode === KEYCODE_TAB;
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (e.shiftKey)
+        /* shift + tab */
+        {
+          if (document.activeElement === firstFocusableEl) {
+            lastFocusableEl.focus();
+            e.preventDefault();
+          }
+        } else
+        /* tab */
+        {
+          if (document.activeElement === lastFocusableEl) {
+            firstFocusableEl.focus();
+            e.preventDefault();
+          }
+        }
+    });
+  };
+
   return {
     showPopup: () => {
       if (filterButton) {
@@ -257,6 +328,18 @@ const handlePopup = (() => {
           evt.preventDefault();
           filterPopup.classList.remove('popup-filter--hide');
           popupOverlay.classList.add('overlay--active');
+          body.style.overflow = 'hidden';
+          const filterTab = filterPopup.querySelectorAll('.popup-filter-title');
+
+          for (let i = 0; i < filterTab.length; i++) {
+            filterTab[0].classList.add('popup-filter-title--select');
+            showText(filterTab[0].nextElementSibling);
+            filterTab[3].classList.add('popup-filter-title--select');
+            showText(filterTab[3].nextElementSibling);
+          }
+
+          ;
+          trapFocus(filterPopup);
         });
         document.addEventListener('keydown', evt => {
           if (evt.keyCode === ESC_KEY_CODE) {
@@ -280,14 +363,6 @@ const handlePopup = (() => {
     },
     useFilterAccordion: () => {
       const filterAccordion = document.getElementById('filter-popup');
-
-      const showText = textEl => {
-        textEl.style.height = textEl.scrollHeight + 'px';
-      };
-
-      const hideText = textItem => {
-        textItem.style.height = '0';
-      };
 
       if (filterAccordion) {
         filterAccordion.addEventListener('click', evt => {
