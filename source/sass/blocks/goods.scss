@@ -142,52 +142,15 @@
   width: 100%;
 }
 
-// Открытые табы
-
-// .goods__tab--open div:first-of-type {
-//   height: auto;
-// }
-
-// .goods__tab--open h3 {
-//   margin: 0 0 22px;
-//   transition: all 0.3s ease 0s;
-// }
-
-// .goods__tab--open h3::after {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   right: 5px;
-//   top: 6px;
-//   width: 17px;
-//   height: 10px;
-//   background-image: url("../img/icon-filter-up-desktop.svg");
-//   background-repeat: no-repeat;
-//   background-position: 0 0;
-//   transition: all 0.3s ease 0s;
-
-//   @include tablet {
-//     width: 25px;
-//     height: 14px;
-//     background-image: url("../img/icon-filter-up-tablet.svg");
-//   }
-
-//   @include mobile {
-//     width: 22px;
-//     height: 12px;
-//     background-image: url("../img/icon-filter-up-mobile.svg");
-//     right: -47px;
-//   }
-// }
-
-
 // Список товаров
 
 .goods__list {
   width: 78%;
+  transform: translate(9px, 1px);
 
   @include tablet {
     width: 100%;
+    transform: translate(-3px, 1px);
   }
 }
 
@@ -291,7 +254,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 15px;
-  transform: translate(32px, 0);
+  transform: translate(23px, -2px);
 
   @include tablet {
     padding: 0;

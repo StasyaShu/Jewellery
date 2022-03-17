@@ -14,7 +14,7 @@
 
   @include tablet {
     margin: 0;
-    padding: 58px 50px 31px;
+    padding: 56px 50px 33px;
   }
 
   @include mobile {
@@ -40,7 +40,7 @@
 
   @include tablet {
     right: 7%;
-    top: 55%;
+    top: 53%;
     width: 25px;
     height: 14px;
     background-image: url("../img/icon-filter-down-tablet.svg");
