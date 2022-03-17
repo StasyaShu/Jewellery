@@ -57,11 +57,11 @@
   position: absolute;
   cursor: pointer;
   top: 20px;
-  right: 30px;
+  right: 20px;
   border: none;
   background: transparent;
-  width: 14px;
-  height: 14px;
+  display: block;
+  padding: 0;
 
   @include tablet {
     width: 20px;
