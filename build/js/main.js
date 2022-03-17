@@ -53,9 +53,9 @@ const handleLoginPopup = (() => {
           evt.preventDefault();
           loginPopup.classList.remove('popup-login--hide');
           popupOverlay.classList.add('overlay--active');
+          body.style.overflow = 'hidden';
           const popupInputEmail = document.getElementById('email-popup');
           popupInputEmail.focus();
-          body.style.overflow = 'hidden';
         });
         document.addEventListener('keydown', evt => {
           if (evt.keyCode === ESC_KEY_CODE) {

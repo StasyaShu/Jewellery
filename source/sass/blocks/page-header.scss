@@ -109,7 +109,7 @@
 
 .page-header__logo {
   display: block;
-  transform: translate(-30px, 10px);
+  transform: translate(80px, 10px);
 
   @include tablet {
     transform: translate(0, 0);
@@ -228,9 +228,12 @@
 .page-header__links {
   display: flex;
   flex-wrap: wrap;
+  width: 350px;
+  justify-content: flex-end;
   transform: translate(-2px, -3px);
 
   @include tablet {
+    width: auto;
     transform: translate(0, 0);
   }
 }
