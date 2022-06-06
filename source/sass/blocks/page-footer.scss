@@ -110,6 +110,8 @@
   font-size: 14px;
   line-height: 21px;
   min-width: 398px;
+  outline: 0;
+  outline-offset: none;
 
   @include poppins-medium;
 

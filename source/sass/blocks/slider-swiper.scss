@@ -131,7 +131,7 @@
 
 .slider-swiper__button-prev-slide {
   cursor: pointer;
-  transform: translate(-2px, 6px);
+  transform: translate(0, 6px);
 
   @include tablet {
     transform: translate(0, 9px);
@@ -151,7 +151,7 @@
 
 .slider-swiper__button-next-slide {
   cursor: pointer;
-  transform: translate(-2px, 6px);
+  transform: translate(0, 6px);
 
   @include tablet {
     transform: translate(0, 9px);
