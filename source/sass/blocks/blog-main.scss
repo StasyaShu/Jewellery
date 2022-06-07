@@ -104,6 +104,7 @@
   color: $dark;
   display: block;
   position: relative;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
@@ -120,6 +121,7 @@
 
 .blog-main__header a:hover {
   font-size: 17px;
+  transition: all 0.3s ease-in;
 }
 
 .blog-main__header a:active {

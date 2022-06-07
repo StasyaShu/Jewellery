@@ -62,6 +62,7 @@
   background: transparent;
   display: block;
   padding: 0;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     width: 20px;
@@ -76,10 +77,12 @@
 
 .popup-login__close-button svg {
   fill: $dark;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__close-button:hover svg {
   fill: $white;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__close-button:active svg {
@@ -132,12 +135,14 @@
   line-height: 18px;
   color: $pale-text;
   align-self: flex-end;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .popup-login__form li:last-child a:hover {
   color: $dark;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__form input {
@@ -145,14 +150,19 @@
   background: transparent;
   padding: 9px 3px;
   border-bottom: 1px solid $dark;
+  outline: 0;
+  outline-offset: none;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__form input:hover {
   border-bottom: 1px solid $white;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__form input:focus {
-  background: $pink;
+  border-bottom: 1px solid $white;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__form input::placeholder {
@@ -192,12 +202,14 @@
   font-size: 14px;
   line-height: 21px;
   color: $dark;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .popup-login__sign-up a:hover {
   box-shadow: 0 0 2px 2px $pale-text;
+  transition: all 0.3s ease-in;
 }
 
 .popup-login__sign-up a:active {

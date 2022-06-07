@@ -67,6 +67,7 @@
   top: 20px;
   right: 0;
   border: none;
+  transition: all 0.3s ease-in;
 
   @include mobile {
     top: 11px;
@@ -82,16 +83,19 @@
   line-height: 21px;
   width: 106px;
   color: $dark;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .page-login__close-button svg {
   stroke: $dark;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__close-button:hover svg {
   stroke: $white;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__close-button:active svg {
@@ -100,6 +104,7 @@
 
 .page-login__close-button:hover p {
   color: $white;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__close-button:active p {
@@ -153,12 +158,14 @@
   line-height: 18px;
   color: $pale-text;
   align-self: flex-end;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .page-login__form li:last-child a:hover {
   color: $dark;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__form input {
@@ -166,6 +173,9 @@
   background: transparent;
   padding: 10px;
   border-bottom: 1px solid $dark;
+  outline: 0;
+  outline-offset: none;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__form input::placeholder {
@@ -178,10 +188,12 @@
 
 .page-login__form input:hover {
   border-bottom: 1px solid $white;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__form input:focus {
-  background: $pink;
+  border-bottom: 1px solid $white;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__sign-up {
@@ -209,12 +221,14 @@
   font-size: 14px;
   line-height: 21px;
   color: $dark;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .page-login__sign-up a:hover {
   box-shadow: 0 0 2px 2px $pale-text;
+  transition: all 0.3s ease-in;
 }
 
 .page-login__sign-up a:active {

@@ -143,6 +143,7 @@
   margin: 0;
   width: 114px;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 
@@ -154,6 +155,7 @@
 .page-footer__signin-input svg {
   margin: 0 0 0 24px;
   stroke: $white;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     margin: 0 0 0 13px;
@@ -166,9 +168,11 @@
 
 .page-footer__signin-input button:hover {
   color: $pink;
+  transition: all 0.3s ease-in;
 
   svg {
     stroke: $pink;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -201,12 +205,14 @@
 .page-footer__services-list a {
   font-size: 16px;
   line-height: 21px;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .page-footer__services-list a:hover {
   color: $pink;
+  transition: all 0.3s ease-in;
 }
 
 .page-footer__services-list li {
@@ -281,12 +287,14 @@
   font-size: 16px;
   line-height: 21px;
   display: flex;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .page-footer__social svg {
   fill: $white;
+  transition: all 0.3s ease-in;
 
   @include mobile {
     width: 20px;
@@ -296,9 +304,11 @@
 
 .page-footer__social a:hover {
   color: $pink;
+  transition: all 0.3s ease-in;
 
   svg {
     fill: $pink;
+    transition: all 0.3s ease-in;
   }
 }
 

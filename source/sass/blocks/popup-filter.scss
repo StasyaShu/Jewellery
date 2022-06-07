@@ -45,6 +45,7 @@
   background-image: url("../img/icon-close-white.svg");
   background-repeat: no-repeat;
   background-position: 7px 7px;
+  transition: all 0.3s ease-in;
 
   @include mobile {
     top: 59px;
@@ -54,6 +55,7 @@
 
 .popup-filter__close-button:hover {
   box-shadow: 0 0 3px 3px $pale-text;
+  transition: all 0.3s ease-in;
 }
 
 .popup-filter__close-button:active {

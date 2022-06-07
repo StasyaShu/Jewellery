@@ -40,12 +40,14 @@
   margin: 0;
   text-align: center;
   width: max-content;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .slider-swiper__title a:hover {
   font-size: 17px;
+  transition: all 0.3s ease-in;
 }
 
 .slider-swiper__title a:active {
@@ -66,10 +68,12 @@
 .slider-swiper__slide {
   display: block;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
 .slider-swiper__slide:hover {
   box-shadow: 0 0 10px $brown-main;
+  transition: all 0.3s ease-in;
 }
 
 .slider-swiper__content {

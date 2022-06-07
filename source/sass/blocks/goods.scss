@@ -102,10 +102,12 @@
   height: 15px;
   border: 1px solid $brown-main;
   background-color: transparent;
+  transition: all 0.3s ease-in;
 }
 
 .goods__tab-content input:hover+label::before {
   background-color: $pink;
+  transition: all 0.3s ease-in;
 }
 
 .goods__tab-content input:checked+label::before {
@@ -286,6 +288,7 @@
   line-height: 21px;
   color: $pale-text;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 
@@ -296,6 +299,7 @@
 
 .goods__pagination li:hover {
   color: $black;
+  transition: all 0.3s ease-in;
 }
 
 .goods__pagination li:first-child {
@@ -308,6 +312,7 @@
   line-height: 21px;
   color: $dark;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 
@@ -319,6 +324,7 @@
 .goods__pagination-button-previous:hover {
   color: $black;
   text-decoration: underline;
+  transition: all 0.3s ease-in;
 }
 
 .goods__pagination-button-next {

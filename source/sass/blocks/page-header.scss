@@ -38,11 +38,17 @@
   }
 }
 
+.page-header__wrapper a {
+  transition: all 0.3s ease-in;
+}
+
 .page-header__wrapper a:hover {
   color: $brown-main;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     color: $dark;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -110,6 +116,7 @@
 .page-header__logo {
   display: block;
   transform: translate(80px, 10px);
+  transition: all 0.3s ease-in;
 
   @include tablet {
     transform: translate(0, 0);
@@ -118,6 +125,7 @@
 
 .page-header__logo svg {
   fill: $brown-main;
+  transition: all 0.3s ease-in;
 
   @include mobile {
     width: 52px;
@@ -127,6 +135,7 @@
 
 .page-header__logo:hover svg {
   fill: $dark;
+  transition: all 0.3s ease-in;
 }
 
 // Поле поиска
@@ -165,19 +174,24 @@
   padding: 11px 5px;
   outline: 0;
   outline-offset: none;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     width: 100%;
     background-color: $white-pale;
     border-radius: 21px;
     margin: 0;
-    padding: 13px 0;
+    padding: 13px 46px;
   }
 
-  &:focus {
-    border: 1px solid $brown-main;
-    padding: 11px 4px;
-    border-radius: 10px;
+  @media (min-width: 1024px) {
+    &:focus {
+      outline: 0;
+      border: 1px solid $brown-main;
+      padding: 11px 4px;
+      border-radius: 10px;
+      transition: border 0.3s ease-in;
+    }
   }
 }
 
@@ -185,6 +199,7 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     position: absolute;
@@ -199,6 +214,7 @@
 
 .page-header__search svg {
   stroke: $black;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     stroke: $white;
@@ -209,11 +225,13 @@
 
 .page-header__search button:hover svg {
   stroke: $brown-dark;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     stroke: $pink;
     fill: $pink;
     opacity: 0.6;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -265,6 +283,7 @@
 
 .page-header__link--cart {
   margin: 0 0 0 34px;
+  transition: all 0.3s ease-in;
 
   @include tablet {
     margin: 0;
@@ -287,6 +306,7 @@
 .page-header__link--cart:hover {
   svg {
     stroke: $brown-main;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -319,6 +339,7 @@
     width: 25px;
     height: 16px;
     position: relative;
+    transition: all 0.3s ease-in;
   }
 }
 
@@ -339,6 +360,7 @@
 .page-header__toggle:hover::before {
   background-color: $brown-main;
   box-shadow: 0 7px 0 0 $brown-main, 0 14px 0 0 $brown-main;
+  transition: all 0.3s ease-in;
 }
 
 // Меню навигации и мобильное меню

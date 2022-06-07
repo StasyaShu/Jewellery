@@ -31,6 +31,7 @@
   font-size: 24px;
   line-height: 36px;
   color: $dark;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
@@ -39,6 +40,7 @@
   font-size: 24px;
   line-height: 36px;
   color: $dark;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
@@ -46,9 +48,11 @@
 .landing-header__navigation li:hover {
   a {
     color: $white;
+    transition: all 0.3s ease-in;
   }
 }
 
 .landing-header__navigation li:hover::marker {
   color: $white;
+  transition: all 0.3s ease-in;
 }

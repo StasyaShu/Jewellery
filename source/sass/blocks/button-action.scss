@@ -7,12 +7,14 @@
   padding: 25px 0;
   border: none;
   width: 100%;
+  transition: all 0.3s ease-in;
 
   @include poppins-medium;
 }
 
 .button-action:hover {
   background-color: $brown-dark;
+  transition: all 0.3s ease-in;
 }
 
 .button-action:active {

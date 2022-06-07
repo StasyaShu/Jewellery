@@ -61,10 +61,12 @@
   height: 15px;
   border: 1px solid $brown-main;
   background-color: transparent;
+  transition: all 0.3s ease-in;
 }
 
 .filter__tab-content input:hover+label::before {
   background-color: $pink;
+  transition: all 0.3s ease-in;
 }
 
 .filter__tab-content input:checked+label::before {
